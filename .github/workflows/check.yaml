@@ -1,0 +1,105 @@
+name: check
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, macos-13]
+      fail-fast: false
+    runs-on: ${{ matrix.os }}
+    continue-on-error: false
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: install
+        if: ${{ matrix.os != 'windows-latest' }}
+        run: |
+          curl -fsSL https://cli.moonbitlang.com/install/unix.sh | bash
+          echo "$HOME/.moon/bin" >> $GITHUB_PATH
+
+      - name: install on windows
+        if: ${{ matrix.os == 'windows-latest' }}
+        run: |
+          Set-ExecutionPolicy RemoteSigned -Scope CurrentUser; irm https://cli.moonbitlang.com/install/powershell.ps1 | iex
+          "C:\Users\runneradmin\.moon\bin" | Out-File -FilePath $env:GITHUB_PATH -Append
+
+      - name: moon version
+        run: |
+          moon version --all
+          moonrun --version
+      - name: Install Deps
+        run: |
+          moon update
+          moon install
+
+      - name: Build Deps Static Library
+        run: |
+          bash .github/workflows/build_libnative.mbt.sh
+
+      - name: moon check
+        run: moon check --deny-warn
+
+      - name: moon info
+        run: |
+          moon info --target native
+          git diff --exit-code
+
+      - name: Build Static Library
+        run: |
+          bash .github/workflows/build_libposix.mbt.sh
+
+      - name: remove incompatible in apple
+        if: ${{ matrix.os == 'macos-13' ||  matrix.os == 'macos-latest' }}
+        run: |
+          bash .github/workflows/rm_incompatible_in_apple.sh
+
+      - name: Build examples
+        run: |
+          moon build --target native
+
+      - name: Set ulimit and run all examples
+        if: ${{ matrix.os != 'windows-latest' }}
+        run: |
+          ulimit -s 8176
+          python3 run_all_examples.py
+
+  typo-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      FORCE_COLOR: 1
+      TYPOS_VERSION: v1.19.0
+    steps:
+      - name: download typos
+        run: curl -LsSf https://github.com/crate-ci/typos/releases/download/$TYPOS_VERSION/typos-$TYPOS_VERSION-x86_64-unknown-linux-musl.tar.gz | tar zxf - -C ${CARGO_HOME:-~/.cargo}/bin
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: check typos
+        run: typos
+
+  moon-json-format-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: check `moon.*.json` format
+        shell: bash
+        run: |
+          _passed=0;
+          for f in $(find . -type f -name "moon.*.json"); do
+            if ! jq '.' $f > /dev/null; then
+              echo $f;
+              _passed=1;
+            fi
+          done
+          (exit $_passed)

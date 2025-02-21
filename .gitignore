@@ -1,0 +1,8 @@
+target/
+.mooncakes/
+.DS_Store
+lib
+build
+tmp
+.vscode
+.cache

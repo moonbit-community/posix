@@ -1,0 +1,13 @@
+{
+  "is-main": true,
+  "import": [
+    "illusory0x0/native"
+  ],
+  "link": {
+    "native": {
+      "cc-flags": "-fwrapv -fsanitize=address -fsanitize=undefined",
+      "cc-link-flags": "-l native.mbt -l posix.mbt -L ./build -L ./lib"
+    }
+  },
+  "warn-list": "-1-2-3-6"
+}

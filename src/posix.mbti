@@ -1,0 +1,1029 @@
+package illusory0x0/posix
+
+alias @illusory0x0/native as @native
+
+// Values
+let _cs_path : Int
+
+let _cs_posix_v6_ilp32_off32_cflags : Int
+
+let _cs_posix_v6_ilp32_off32_ldflags : Int
+
+let _cs_posix_v6_ilp32_off32_libs : Int
+
+let _cs_posix_v6_ilp32_offbig_cflags : Int
+
+let _cs_posix_v6_ilp32_offbig_ldflags : Int
+
+let _cs_posix_v6_ilp32_offbig_libs : Int
+
+let _cs_posix_v6_lp64_off64_cflags : Int
+
+let _cs_posix_v6_lp64_off64_ldflags : Int
+
+let _cs_posix_v6_lp64_off64_libs : Int
+
+let _cs_posix_v6_lpbig_offbig_cflags : Int
+
+let _cs_posix_v6_lpbig_offbig_ldflags : Int
+
+let _cs_posix_v6_lpbig_offbig_libs : Int
+
+let _cs_posix_v6_width_restricted_envs : Int
+
+let _cs_posix_v7_ilp32_off32_cflags : Int
+
+let _cs_posix_v7_ilp32_off32_ldflags : Int
+
+let _cs_posix_v7_ilp32_off32_libs : Int
+
+let _cs_posix_v7_ilp32_offbig_cflags : Int
+
+let _cs_posix_v7_ilp32_offbig_ldflags : Int
+
+let _cs_posix_v7_ilp32_offbig_libs : Int
+
+let _cs_posix_v7_lp64_off64_cflags : Int
+
+let _cs_posix_v7_lp64_off64_ldflags : Int
+
+let _cs_posix_v7_lp64_off64_libs : Int
+
+let _cs_posix_v7_lpbig_offbig_cflags : Int
+
+let _cs_posix_v7_lpbig_offbig_ldflags : Int
+
+let _cs_posix_v7_lpbig_offbig_libs : Int
+
+let _cs_posix_v7_width_restricted_envs : Int
+
+let _cs_v6_env : Int
+
+let _cs_v7_env : Int
+
+let _iofbf : BufMode
+
+let _iolbf : BufMode
+
+let _ionbf : BufMode
+
+let _pc_2_symlinks : Int
+
+let _pc_alloc_size_min : Int
+
+let _pc_async_io : Int
+
+let _pc_chown_restricted : Int
+
+let _pc_filesizebits : Int
+
+let _pc_link_max : Int
+
+let _pc_max_canon : Int
+
+let _pc_max_input : Int
+
+let _pc_name_max : Int
+
+let _pc_no_trunc : Int
+
+let _pc_path_max : Int
+
+let _pc_pipe_buf : Int
+
+let _pc_prio_io : Int
+
+let _pc_rec_incr_xfer_size : Int
+
+let _pc_rec_max_xfer_size : Int
+
+let _pc_rec_min_xfer_size : Int
+
+let _pc_rec_xfer_align : Int
+
+let _pc_symlink_max : Int
+
+let _pc_sync_io : Int
+
+let _pc_vdisable : Int
+
+let _sc_2_c_bind : Int
+
+let _sc_2_c_dev : Int
+
+let _sc_2_char_term : Int
+
+let _sc_2_fort_dev : Int
+
+let _sc_2_fort_run : Int
+
+let _sc_2_localedef : Int
+
+let _sc_2_pbs : Int
+
+let _sc_2_pbs_accounting : Int
+
+let _sc_2_pbs_checkpoint : Int
+
+let _sc_2_pbs_locate : Int
+
+let _sc_2_pbs_message : Int
+
+let _sc_2_pbs_track : Int
+
+let _sc_2_sw_dev : Int
+
+let _sc_2_upe : Int
+
+let _sc_2_version : Int
+
+let _sc_advisory_info : Int
+
+let _sc_aio_listio_max : Int
+
+let _sc_aio_max : Int
+
+let _sc_aio_prio_delta_max : Int
+
+let _sc_arg_max : Int
+
+let _sc_asynchronous_io : Int
+
+let _sc_atexit_max : Int
+
+let _sc_barriers : Int
+
+let _sc_bc_base_max : Int
+
+let _sc_bc_dim_max : Int
+
+let _sc_bc_scale_max : Int
+
+let _sc_bc_string_max : Int
+
+let _sc_child_max : Int
+
+let _sc_clk_tck : Int
+
+let _sc_clock_selection : Int
+
+let _sc_coll_weights_max : Int
+
+let _sc_cputime : Int
+
+let _sc_delaytimer_max : Int
+
+let _sc_expr_nest_max : Int
+
+let _sc_fsync : Int
+
+let _sc_getgr_r_size_max : Int
+
+let _sc_getpw_r_size_max : Int
+
+let _sc_host_name_max : Int
+
+let _sc_iov_max : Int
+
+let _sc_ipv6 : Int
+
+let _sc_job_control : Int
+
+let _sc_line_max : Int
+
+let _sc_login_name_max : Int
+
+let _sc_mapped_files : Int
+
+let _sc_memlock : Int
+
+let _sc_memlock_range : Int
+
+let _sc_memory_protection : Int
+
+let _sc_message_passing : Int
+
+let _sc_monotonic_clock : Int
+
+let _sc_mq_open_max : Int
+
+let _sc_mq_prio_max : Int
+
+let _sc_ngroups_max : Int
+
+let _sc_open_max : Int
+
+let _sc_page_size : Int
+
+let _sc_pagesize : Int
+
+let _sc_prioritized_io : Int
+
+let _sc_priority_scheduling : Int
+
+let _sc_raw_sockets : Int
+
+let _sc_re_dup_max : Int
+
+let _sc_reader_writer_locks : Int
+
+let _sc_realtime_signals : Int
+
+let _sc_regexp : Int
+
+let _sc_rtsig_max : Int
+
+let _sc_saved_ids : Int
+
+let _sc_sem_nsems_max : Int
+
+let _sc_sem_value_max : Int
+
+let _sc_semaphores : Int
+
+let _sc_shared_memory_objects : Int
+
+let _sc_shell : Int
+
+let _sc_sigqueue_max : Int
+
+let _sc_spawn : Int
+
+let _sc_spin_locks : Int
+
+let _sc_sporadic_server : Int
+
+let _sc_ss_repl_max : Int
+
+let _sc_stream_max : Int
+
+let _sc_symloop_max : Int
+
+let _sc_synchronized_io : Int
+
+let _sc_thread_attr_stackaddr : Int
+
+let _sc_thread_attr_stacksize : Int
+
+let _sc_thread_cputime : Int
+
+let _sc_thread_destructor_iterations : Int
+
+let _sc_thread_keys_max : Int
+
+let _sc_thread_prio_inherit : Int
+
+let _sc_thread_prio_protect : Int
+
+let _sc_thread_priority_scheduling : Int
+
+let _sc_thread_process_shared : Int
+
+let _sc_thread_robust_prio_inherit : Int
+
+let _sc_thread_robust_prio_protect : Int
+
+let _sc_thread_safe_functions : Int
+
+let _sc_thread_sporadic_server : Int
+
+let _sc_thread_stack_min : Int
+
+let _sc_thread_threads_max : Int
+
+let _sc_threads : Int
+
+let _sc_timeouts : Int
+
+let _sc_timer_max : Int
+
+let _sc_timers : Int
+
+let _sc_trace : Int
+
+let _sc_trace_event_filter : Int
+
+let _sc_trace_event_name_max : Int
+
+let _sc_trace_inherit : Int
+
+let _sc_trace_log : Int
+
+let _sc_trace_name_max : Int
+
+let _sc_trace_sys_max : Int
+
+let _sc_trace_user_event_max : Int
+
+let _sc_tty_name_max : Int
+
+let _sc_typed_memory_objects : Int
+
+let _sc_tzname_max : Int
+
+let _sc_v6_ilp32_off32 : Int
+
+let _sc_v6_ilp32_offbig : Int
+
+let _sc_v6_lp64_off64 : Int
+
+let _sc_v6_lpbig_offbig : Int
+
+let _sc_v7_ilp32_off32 : Int
+
+let _sc_v7_ilp32_offbig : Int
+
+let _sc_v7_lp64_off64 : Int
+
+let _sc_v7_lpbig_offbig : Int
+
+let _sc_version : Int
+
+let _sc_xopen_crypt : Int
+
+let _sc_xopen_enh_i18n : Int
+
+let _sc_xopen_realtime : Int
+
+let _sc_xopen_realtime_threads : Int
+
+let _sc_xopen_shm : Int
+
+let _sc_xopen_streams : Int
+
+let _sc_xopen_unix : Int
+
+let _sc_xopen_version : Int
+
+let at_eaccess : AtFlag
+
+let at_fdcwd : Fd
+
+let at_removedir : AtFlag
+
+let at_symlink_follow : AtFlag
+
+let at_symlink_nofollow : AtFlag
+
+let bufsiz : UInt64
+
+fn close(Fd) -> Rslt
+
+fn confstr(Int, @native.Ptr[Byte], UInt64) -> UInt64
+
+let directory_default_mode : Mode
+
+fn dup(Fd) -> Fd
+
+fn dup2(Fd, Fd) -> Fd
+
+let e2big : Errno
+
+let eacces : Errno
+
+let eaddrinuse : Errno
+
+let eaddrnotavail : Errno
+
+let eadv : Errno
+
+let eafnosupport : Errno
+
+let eagain : Errno
+
+let ealready : Errno
+
+let ebade : Errno
+
+let ebadf : Errno
+
+let ebadfd : Errno
+
+let ebadmsg : Errno
+
+let ebadr : Errno
+
+let ebadrqc : Errno
+
+let ebadslt : Errno
+
+let ebfont : Errno
+
+let ebusy : Errno
+
+let ecanceled : Errno
+
+let echild : Errno
+
+let echrng : Errno
+
+let ecomm : Errno
+
+let econnaborted : Errno
+
+let econnrefused : Errno
+
+let econnreset : Errno
+
+let edeadlk : Errno
+
+let edeadlock : Errno
+
+let edestaddrreq : Errno
+
+let edom : Errno
+
+let edotdot : Errno
+
+let edquot : Errno
+
+let eexist : Errno
+
+let efault : Errno
+
+let efbig : Errno
+
+let ehostdown : Errno
+
+let ehostunreach : Errno
+
+let ehwpoison : Errno
+
+let eidrm : Errno
+
+let eilseq : Errno
+
+let einprogress : Errno
+
+let eintr : Errno
+
+let einval : Errno
+
+let eio : Errno
+
+let eisconn : Errno
+
+let eisdir : Errno
+
+let eisnam : Errno
+
+let ekeyexpired : Errno
+
+let ekeyrejected : Errno
+
+let ekeyrevoked : Errno
+
+let el2hlt : Errno
+
+let el2nsync : Errno
+
+let el3hlt : Errno
+
+let el3rst : Errno
+
+let elibacc : Errno
+
+let elibbad : Errno
+
+let elibexec : Errno
+
+let elibmax : Errno
+
+let elibscn : Errno
+
+let elnrng : Errno
+
+let eloop : Errno
+
+let emediumtype : Errno
+
+let emfile : Errno
+
+let emlink : Errno
+
+let emsgsize : Errno
+
+let emultihop : Errno
+
+let enametoolong : Errno
+
+let enavail : Errno
+
+let enetdown : Errno
+
+let enetreset : Errno
+
+let enetunreach : Errno
+
+let enfile : Errno
+
+let enoano : Errno
+
+let enobufs : Errno
+
+let enocsi : Errno
+
+let enodata : Errno
+
+let enodev : Errno
+
+let enoent : Errno
+
+let enoexec : Errno
+
+let enokey : Errno
+
+let enolck : Errno
+
+let enolink : Errno
+
+let enomedium : Errno
+
+let enomem : Errno
+
+let enomsg : Errno
+
+let enonet : Errno
+
+let enopkg : Errno
+
+let enoprotoopt : Errno
+
+let enospc : Errno
+
+let enosr : Errno
+
+let enostr : Errno
+
+let enosys : Errno
+
+let enotblk : Errno
+
+let enotconn : Errno
+
+let enotdir : Errno
+
+let enotempty : Errno
+
+let enotnam : Errno
+
+let enotrecoverable : Errno
+
+let enotsock : Errno
+
+let enotsup : Errno
+
+let enotty : Errno
+
+let enotuniq : Errno
+
+let enxio : Errno
+
+let eof : FRslt
+
+let eopnotsupp : Errno
+
+let eoverflow : Errno
+
+let eownerdead : Errno
+
+let eperm : Errno
+
+let epfnosupport : Errno
+
+let epipe : Errno
+
+let eproto : Errno
+
+let eprotonosupport : Errno
+
+let eprototype : Errno
+
+let erange : Errno
+
+let eremchg : Errno
+
+let eremote : Errno
+
+let eremoteio : Errno
+
+let erestart : Errno
+
+let erfkill : Errno
+
+let erofs : Errno
+
+let eshutdown : Errno
+
+let esocktnosupport : Errno
+
+let espipe : Errno
+
+let esrch : Errno
+
+let esrmnt : Errno
+
+let estale : Errno
+
+let estrpipe : Errno
+
+let etime : Errno
+
+let etimedout : Errno
+
+let etoomanyrefs : Errno
+
+let etxtbsy : Errno
+
+let euclean : Errno
+
+let eunatch : Errno
+
+let eusers : Errno
+
+let ewouldblock : Errno
+
+let exdev : Errno
+
+let exfull : Errno
+
+let f_dupfd : FcntlCmd
+
+let f_dupfd_cloexec : FcntlCmd
+
+let f_getfd : FcntlCmd
+
+let f_getfl : FcntlCmd
+
+let f_getlk : FcntlCmd
+
+let f_getown : FcntlCmd
+
+let f_ok : AccessMode
+
+let f_rdlck : FcntlCmd
+
+let f_setfd : FcntlCmd
+
+let f_setfl : FcntlCmd
+
+let f_setlk : FcntlCmd
+
+let f_setlkw : FcntlCmd
+
+let f_setown : FcntlCmd
+
+let f_unlck : FcntlCmd
+
+let f_wrlck : FcntlCmd
+
+fn faccessat(Fd, @native.CStr, AccessMode, AtFlag) -> Rslt
+
+fn fchdir(Fd) -> Rslt
+
+fn fchown(Fd, Uid, Gid) -> Rslt
+
+fn fchownat(Fd, @native.CStr, Uid, Gid, AtFlag) -> Rslt
+
+fn fclose(@native.Ptr[FILE]) -> FRslt
+
+let fd_cloexec : FcntlCmd
+
+fn fdatasync(Fd) -> Rslt
+
+fn fdopen(Fd, @native.CStr) -> @native.Ptr[FILE]
+
+fn fexecve(Fd, @native.ConstPtr[@native.CStr], @native.ConstPtr[@native.CStr]) -> Rslt
+
+fn fflush(@native.Ptr[FILE]) -> FRslt
+
+fn fgetc(@native.Ptr[FILE]) -> FRslt
+
+fn fgets(@native.Ptr[Byte], Int, @native.Ptr[FILE]) -> @native.Ptr[Byte]
+
+let file_default_mode : Mode
+
+fn fork() -> Pid
+
+fn fpathconf(Fd, Int) -> Int64
+
+fn fputc(Int, @native.Ptr[FILE]) -> FRslt
+
+fn fputs(@native.CStr, @native.Ptr[FILE]) -> FRslt
+
+fn fread(@native.Ptr[Byte], UInt64, UInt64, @native.Ptr[FILE]) -> UInt64
+
+fn fsync(Fd) -> Rslt
+
+fn ftruncate(Fd, Int) -> Rslt
+
+fn fwrite(@native.ConstPtr[Byte], UInt64, UInt64, @native.Ptr[FILE]) -> UInt64
+
+fn get_errno() -> Errno
+
+fn getcwd(@native.Ptr[Byte], UInt64) -> @native.Ptr[Byte]
+
+fn getegid() -> Gid
+
+fn geteuid() -> Uid
+
+fn getgid() -> Gid
+
+fn getgroups(UInt64, @native.Ptr[Gid]) -> Int64
+
+fn gethostname(@native.Ptr[Byte], UInt64) -> Rslt
+
+fn getpgid(Pid) -> Pid
+
+fn getpid() -> Pid
+
+fn getppid() -> Pid
+
+fn getsid(Pid) -> Sid
+
+fn getuid() -> Uid
+
+fn isatty(Fd) -> Int
+
+fn linkat(Fd, @native.CStr, Fd, @native.CStr, AtFlag) -> Rslt
+
+fn lockf(Fd, Int, Int64) -> Rslt
+
+fn lseek(Fd, Int64, Whence) -> Int64
+
+fn mkdirat(Fd, @native.CStr, Mode) -> Rslt
+
+fn nice(Int) -> Rslt
+
+let o_accmode : OpenFlag
+
+let o_append : OpenFlag
+
+let o_cloexec : OpenFlag
+
+let o_creat : OpenFlag
+
+let o_directory : OpenFlag
+
+let o_dsync : OpenFlag
+
+let o_excl : OpenFlag
+
+let o_exec : OpenFlag
+
+let o_nocreat : OpenFlag
+
+let o_nofollow : OpenFlag
+
+let o_nonblock : OpenFlag
+
+let o_rdonly : OpenFlag
+
+let o_rdwr : OpenFlag
+
+let o_rsync : OpenFlag
+
+let o_sync : OpenFlag
+
+let o_trunc : OpenFlag
+
+let o_wronly : OpenFlag
+
+fn openat(Fd, @native.CStr, OpenFlag, Mode) -> Fd
+
+fn pause() -> Rslt
+
+fn pipe(@native.Ptr[Fd]) -> Rslt
+
+fn pread(Fd, @native.Ptr[Byte], UInt64, Int64) -> Rslt
+
+fn pwrite(Fd, @native.ConstPtr[Byte], UInt64, Int64) -> Rslt
+
+let r_ok : AccessMode
+
+fn read(Fd, @native.Ptr[Byte], UInt64) -> Int64
+
+let s_ifblk : Mode
+
+let s_ifchr : Mode
+
+let s_ifdir : Mode
+
+let s_ififo : Mode
+
+let s_iflnk : Mode
+
+let s_ifmt : Mode
+
+let s_ifreg : Mode
+
+let s_irgrp : Mode
+
+let s_iroth : Mode
+
+let s_irusr : Mode
+
+let s_irwxg : Mode
+
+let s_irwxo : Mode
+
+let s_irwxu : Mode
+
+let s_isgid : Mode
+
+let s_issvt : Mode
+
+let s_isuid : Mode
+
+let s_iwgrp : Mode
+
+let s_iwoth : Mode
+
+let s_iwusr : Mode
+
+let s_ixgrp : Mode
+
+let s_ixoth : Mode
+
+let s_ixusr : Mode
+
+let seek_cur : Whence
+
+let seek_end : Whence
+
+let seek_set : Whence
+
+fn set_errno(Errno) -> Unit
+
+fn setegid(Gid) -> Rslt
+
+fn seteuid(Uid) -> Rslt
+
+fn setgid(Gid) -> Rslt
+
+fn sethostname(@native.ConstPtr[Byte], UInt64) -> Rslt
+
+fn setpgid(Pid, Pid) -> Rslt
+
+fn setsid() -> Sid
+
+fn setuid(Uid) -> Rslt
+
+fn setvbuf(@native.Ptr[FILE], @native.Ptr[Byte], BufMode, UInt64) -> FRslt
+
+fn sleep(UInt) -> UInt
+
+let stderr_fileno : Fd
+
+let stderr_fileptr : @native.Ptr[FILE]
+
+let stdin_fileno : Fd
+
+let stdin_fileptr : @native.Ptr[FILE]
+
+let stdout_fileno : Fd
+
+let stdout_fileptr : @native.Ptr[FILE]
+
+fn sync() -> Unit
+
+fn ttyname_r(Fd, @native.Ptr[Byte], UInt64) -> Rslt
+
+fn ungetc(Int, @native.Ptr[FILE]) -> FRslt
+
+fn unlinkat(Fd, @native.CStr, Int) -> Rslt
+
+let w_ok : AccessMode
+
+fn wait(@native.Ptr[Int]) -> Pid
+
+fn write(Fd, @native.ConstPtr[Byte], UInt64) -> Int64
+
+let x_ok : AccessMode
+
+// Types and methods
+type AccessMode
+impl Default for AccessMode
+impl Eq for AccessMode
+impl Show for AccessMode
+
+type AtFlag
+impl Default for AtFlag
+impl Eq for AtFlag
+impl Show for AtFlag
+
+type BufMode
+impl Default for BufMode
+impl Eq for BufMode
+impl Show for BufMode
+
+pub type DIR
+
+type Errno
+impl Default for Errno
+impl Eq for Errno
+impl Show for Errno
+
+type FILE
+
+type FRslt
+impl FRslt {
+  to_char(Self) -> Unit
+}
+impl Default for FRslt
+impl Eq for FRslt
+impl Show for FRslt
+
+type FcntlCmd
+impl Default for FcntlCmd
+impl Eq for FcntlCmd
+impl Show for FcntlCmd
+
+type Fd
+impl Default for Fd
+impl Eq for Fd
+impl Show for Fd
+
+type Gid
+impl Gid {
+  unsafe_from_uint(UInt) -> Self
+}
+impl Default for Gid
+impl Eq for Gid
+impl Show for Gid
+
+type Mode
+impl Mode {
+  lor(Self, Self) -> Self
+}
+impl Default for Mode
+impl Eq for Mode
+impl Show for Mode
+
+type OpenFlag
+impl OpenFlag {
+  lor(Self, Self) -> Self
+}
+impl Default for OpenFlag
+impl Eq for OpenFlag
+impl Show for OpenFlag
+
+type Pid
+impl Pid {
+  is_child(Self) -> Bool
+  is_error(Self) -> Bool
+  unsafe_from_int(Int) -> Self
+}
+impl Default for Pid
+impl Eq for Pid
+impl Show for Pid
+
+type Rslt
+impl Rslt {
+  is_error(Self) -> Bool
+  is_success(Self) -> Bool
+}
+impl Default for Rslt
+impl Eq for Rslt
+impl Show for Rslt
+
+type Sid
+impl Sid {
+  is_error(Self) -> Bool
+  unsafe_from_uint(UInt) -> Self
+}
+impl Default for Sid
+impl Eq for Sid
+impl Show for Sid
+
+type Signal
+impl Default for Signal
+impl Eq for Signal
+impl Show for Signal
+
+type Uid
+impl Uid {
+  unsafe_from_uint(UInt) -> Self
+}
+impl Default for Uid
+impl Eq for Uid
+impl Show for Uid
+
+type Whence
+impl Default for Whence
+impl Eq for Whence
+impl Show for Whence
+
+// Type aliases
+pub typealias CStr = @native.CStr
+
+pub typealias CString = @native.MCStr
+
+pub typealias ConstPtr[T] = @native.ConstPtr[T]
+
+pub typealias Ptr[T] = @native.Ptr[T]
+
+pub typealias Rc[T] = @native.Rc[T]
+
+// Traits
+

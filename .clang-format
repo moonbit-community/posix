@@ -1,0 +1,9 @@
+---
+BasedOnStyle: Chromium
+AlignAfterOpenBracket: AlwaysBreak
+ColumnLimit: '70'
+FixNamespaceComments: 'true'
+TabWidth: '2'
+UseTab: Never
+AllowShortFunctionsOnASingleLine: All
+...
