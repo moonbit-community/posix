@@ -4,6 +4,9 @@
 
 ### Install from mooncake
 
+Install the module with the following bash command.
+Static libraries are installed in `/your_project/lib`.
+
 ```bash
 moon add illusory0x0/native
 bash .mooncakes/illusory0x0/native/install.sh
@@ -11,6 +14,32 @@ bash .mooncakes/illusory0x0/native/install.sh
 moon add illusory0x0/posix
 bash .mooncakes/illusory0x0/posix/install.sh
 ```
+
+### Configuration
+
+Modify `moon.pkg.json` to the following code snippet
+
+```json
+{
+  "is-main": true,
+  "import": [
+    "illusory0x0/native",
+    "illusory0x0/posix"
+  ],
+  "link": {
+    "native": {
+      "cc-flags": "-fwrapv -fsanitize=address -fsanitize=undefined",
+      "cc-link-flags": "-l native.mbt -l posix.mbt -L ./lib"
+    }
+  }
+}
+```
+
+## Usage 
+
+Under `./src/example` there are some examples, some of them won't compile on Mac, more details are in `.github/workflows/rm_incompatible_in_apple.sh`.
+
+Reduce the overhead of static library function calls by enable [lto](https://gcc.gnu.org/onlinedocs/gccint/LTO-Overview.html) when release.
 
 
 ## Name convention
