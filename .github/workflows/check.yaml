@@ -37,10 +37,7 @@ jobs:
         run: |
           moon update
           moon install
-
-      - name: Build Deps Static Library
-        run: |
-          bash .github/workflows/build_libnative.mbt.sh
+          bash .mooncakes/illusory0x0/native/install.sh
 
       - name: moon check
         run: moon check --deny-warn

@@ -2,30 +2,15 @@
 
 ## Installation
 
-### Install illusory0x0/native Library
-
-https://github.com/moonbit-community/native
-
 ### Install from mooncake
 
 ```bash
+moon add illusory0x0/native
+bash .mooncakes/illusory0x0/native/install.sh
+
 moon add illusory0x0/posix
+bash .mooncakes/illusory0x0/posix/install.sh
 ```
-
-### Build Static Library
-
-```bash
-export MOON_HOME="$HOME/.moon"
-mkdir build
-cd build
-cmake ../stub
-cmake --build .
-cd ..
-```
-
-### Install Static Library
-
-copy `libposix.mbt.a` into /your_project/lib
 
 
 ## Name convention
