@@ -1,5 +1,18 @@
 # illusory0x0/posix
 
+## Description
+
+a simple posix API FFI library (WIP).
+
+Provide posix standard in [unistd.h](https://www.man7.org/linux/man-pages/man0/unistd.h.0p.html) most of the functions, the same category of functions only `at` series of functions and functions to support `file descriptor` operations, as far as possible to avoid the use of `CString` to operate the file, such as only `fchownat` and `fchown` no `chown`, first open the file to obtain the `file descriptor` and then operate the file.
+
+Currently waiting for official build system and FFI toolchain support. FFI Tools like [rust bindgen](https://github.com/rust-lang/rust-bindgen)
+
+In [/src/example](https://github.com/moonbit-community/posix/tree/master/src/examples) directory provides a number of useful examples.
+
+Currently supported interfaces can be viewed at [posix.mbti](https://github.com/moonbit-community/posix/blob/master/src/posix.mbti)
+
+
 ## Installation
 
 ### Install from mooncake
