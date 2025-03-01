@@ -917,7 +917,7 @@ impl Default for BufMode
 impl Eq for BufMode
 impl Show for BufMode
 
-pub type DIR
+type DIR
 
 type Errno
 impl Default for Errno

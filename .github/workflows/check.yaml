@@ -40,7 +40,7 @@ jobs:
           bash .mooncakes/illusory0x0/native/install.sh
 
       - name: moon check
-        run: moon check --deny-warn
+        run: moon check --deny-warn --target native
 
       - name: moon info
         run: |
