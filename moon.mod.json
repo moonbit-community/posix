@@ -2,7 +2,7 @@
   "name": "illusory0x0/posix",
   "version": "0.1.1",
   "deps": {
-    "illusory0x0/native": "0.1.2"
+    "illusory0x0/native": "0.1.3"
   },
   "readme": "README.md",
   "repository": "https://github.com/moonbit-community/posix",
