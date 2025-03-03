@@ -1,5 +1,5 @@
 ///|
-type FILE
+extern type FILE
 
 ///|
 extern "c" fn _stdout() -> Ptr[FILE] = "moonbit_posix_stdout"

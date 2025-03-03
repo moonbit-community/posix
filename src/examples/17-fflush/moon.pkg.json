@@ -10,5 +10,8 @@
       "cc-link-flags": "-l native.mbt -l posix.mbt -L ./build -L ./lib"
     }
   },
-  "warn-list": "-1-2-3-6-29"
+  "warn-list": "-1-2-3-6-29",
+  "supported-targets": [
+    "native"
+  ]
 }
