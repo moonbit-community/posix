@@ -37,7 +37,7 @@ Modify `moon.pkg.json` to the following code snippet
   "is-main": true,
   "import": [
     "illusory0x0/native",
-    "illusory0x0/posix"
+    "illusory0x0/posix/posix"
   ],
   "link": {
     "native": {

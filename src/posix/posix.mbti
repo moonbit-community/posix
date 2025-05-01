@@ -1,4 +1,4 @@
-package "illusory0x0/posix"
+package "illusory0x0/posix/posix"
 
 import(
   "illusory0x0/native"
