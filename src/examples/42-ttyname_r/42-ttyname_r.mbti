@@ -1,4 +1,4 @@
-package illusory0x0/posix/examples/42-ttyname_r
+package "illusory0x0/posix/examples/42-ttyname_r"
 
 // Values
 

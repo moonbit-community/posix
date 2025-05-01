@@ -1,4 +1,4 @@
-package illusory0x0/posix/examples/39-sethostname
+package "illusory0x0/posix/examples/39-sethostname"
 
 // Values
 

@@ -1,4 +1,4 @@
-package illusory0x0/posix/examples/45-lseek
+package "illusory0x0/posix/examples/45-lseek"
 
 // Values
 

@@ -6,7 +6,7 @@
   "link": {
     "native": {
       "cc-flags": "-fwrapv -fsanitize=address -fsanitize=undefined",
-      "cc-link-flags": "-l native.mbt -l posix.mbt -L ./build -L ./lib"
+      "cc-link-flags": "-l posix.mbt -L ./build"
     }
   },
   "warn-list": "-1-2-3-6",

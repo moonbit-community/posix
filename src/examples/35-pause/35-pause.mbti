@@ -1,4 +1,4 @@
-package illusory0x0/posix/examples/35-pause
+package "illusory0x0/posix/examples/35-pause"
 
 // Values
 

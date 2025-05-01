@@ -1,6 +1,8 @@
-package illusory0x0/posix
+package "illusory0x0/posix"
 
-alias @illusory0x0/native as @native
+import(
+  "illusory0x0/native"
+)
 
 // Values
 let _cs_path : Int

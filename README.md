@@ -42,7 +42,7 @@ Modify `moon.pkg.json` to the following code snippet
   "link": {
     "native": {
       "cc-flags": "-fwrapv -fsanitize=address -fsanitize=undefined",
-      "cc-link-flags": "-l native.mbt -l posix.mbt -L ./lib"
+      "cc-link-flags": "-l posix.mbt "
     }
   }
 }

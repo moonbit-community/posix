@@ -1,4 +1,4 @@
-package illusory0x0/posix/examples/34-sync
+package "illusory0x0/posix/examples/34-sync"
 
 // Values
 

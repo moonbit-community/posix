@@ -1,4 +1,4 @@
-package illusory0x0/posix/examples/22-setgid-setegid-setuid-seteuid
+package "illusory0x0/posix/examples/22-setgid-setegid-setuid-seteuid"
 
 // Values
 

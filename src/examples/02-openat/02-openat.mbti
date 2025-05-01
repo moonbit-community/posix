@@ -1,4 +1,4 @@
-package illusory0x0/posix/examples/02-openat
+package "illusory0x0/posix/examples/02-openat"
 
 // Values
 
