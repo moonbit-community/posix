@@ -3,8 +3,7 @@
   "import": ["illusory0x0/native"],
   "link": {
     "native": {
-      "cc-flags": "-fwrapv -fsanitize=address -fsanitize=undefined",
-      "cc-link-flags": "-l posix.mbt -L ./build"
+      "cc-flags": "-fwrapv -fsanitize=address -fsanitize=undefined"
     }
   },
   "warn-list": "-1-2-3-6",
