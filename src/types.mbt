@@ -43,9 +43,6 @@ typealias Size = UInt64
 type Mode UInt derive(Default, Eq, Show) // TODO
 
 ///|
-pub fn Mode::lor(self : Mode, other : Mode) -> Mode = "%u32.bitor"
-
-///|
 type Rslt Int derive(Default, Eq, Show)
 
 ///|
@@ -72,9 +69,6 @@ type AtFlag Int derive(Default, Eq, Show)
 
 ///|
 type OpenFlag Int derive(Default, Eq, Show)
-
-///|
-pub fn OpenFlag::lor(self : OpenFlag, other : OpenFlag) -> OpenFlag = "%i32_lor"
 
 ///|
 type Whence Int derive(Default, Eq, Show)

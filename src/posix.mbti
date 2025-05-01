@@ -955,17 +955,13 @@ impl Eq for Gid
 impl Show for Gid
 
 type Mode
-impl Mode {
-  lor(Self, Self) -> Self
-}
+impl BitOr for Mode
 impl Default for Mode
 impl Eq for Mode
 impl Show for Mode
 
 type OpenFlag
-impl OpenFlag {
-  lor(Self, Self) -> Self
-}
+impl BitOr for OpenFlag
 impl Default for OpenFlag
 impl Eq for OpenFlag
 impl Show for OpenFlag
