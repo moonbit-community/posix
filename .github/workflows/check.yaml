@@ -66,7 +66,8 @@ jobs:
         if: ${{ matrix.os != 'windows-latest' }}
         run: |
           ulimit -s 8176
-          python3 run_all_examples.py
+          npm i -D tsx
+          npx tsx run_all_examples.ts
 
   typo-check:
     runs-on: ubuntu-latest
