@@ -13,5 +13,8 @@
   "warn-list": "-1-2-3-6-29",
   "supported-targets": [
     "native"
-  ]
+  ],
+  "targets": {
+    "main.mbt" : ["native"]
+  }
 }
