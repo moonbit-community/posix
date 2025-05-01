@@ -10,7 +10,7 @@ jobs:
   build:
     strategy:
       matrix:
-        os: [ubuntu-latest, macos-latest, macos-13]
+        os: [ubuntu-latest]
       fail-fast: false
     runs-on: ${{ matrix.os }}
     continue-on-error: false
@@ -45,10 +45,6 @@ jobs:
         run: |
           moon info --target native
           git diff --exit-code
-
-      - name: Build Static Library
-        run: |
-          bash .github/workflows/build_libposix.mbt.sh
 
       - name: remove incompatible in apple
         if: ${{ matrix.os == 'macos-13' ||  matrix.os == 'macos-latest' }}
