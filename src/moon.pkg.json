@@ -1,8 +1,6 @@
 {
   "is-main": true,
-  "import": [
-    "illusory0x0/native"
-  ],
+  "import": ["illusory0x0/native"],
   "link": {
     "native": {
       "cc-flags": "-fwrapv -fsanitize=address -fsanitize=undefined",
@@ -10,7 +8,26 @@
     }
   },
   "warn-list": "-1-2-3-6",
-  "supported-targets": [
-    "native"
-  ]
+  "supported-targets": ["native"],
+  "targets": {
+    "bitor.mbt": ["native"],
+    "dirent.mbt": ["native"],
+    "dummy.mbt": ["native"],
+    "errno.mbt": ["native"],
+    "examples": ["native"],
+    "fcntl.mbt": ["native"],
+    "imports.mbt": ["native"],
+    "moon.pkg.json": ["native"],
+    "posix.mbti": ["native"],
+    "stat_inode.mbt": ["native"],
+    "stat.mbt": ["native"],
+    "stdio.mbt": ["native"],
+    "types.mbt": ["native"],
+    "unistd_at.mbt": ["native"],
+    "unistd_conf.mbt": ["native"],
+    "unistd_fd.mbt": ["native"],
+    "unistd_id.mbt": ["native"],
+    "unistd.mbt": ["native"],
+    "wait.mbt": ["native"]
+  }
 }
