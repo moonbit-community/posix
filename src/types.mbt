@@ -62,7 +62,7 @@ type FRslt Int derive(Default, Eq, Show)
 type Signal Int derive(Default, Eq, Show)
 
 ///|
-type Errno Int derive(Default, Eq, Show)
+typealias Errno = Int
 
 ///|
 type AtFlag Int derive(Default, Eq, Show)

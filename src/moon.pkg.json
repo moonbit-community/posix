@@ -29,5 +29,6 @@
     "unistd_id.mbt": ["native"],
     "unistd.mbt": ["native"],
     "wait.mbt": ["native"]
-  }
+  },
+  "native-stub": ["stub.c"]
 }
