@@ -17,8 +17,6 @@
     "examples": ["native"],
     "fcntl.mbt": ["native"],
     "imports.mbt": ["native"],
-    "moon.pkg.json": ["native"],
-    "posix.mbti": ["native"],
     "stat_inode.mbt": ["native"],
     "stat.mbt": ["native"],
     "stdio.mbt": ["native"],
