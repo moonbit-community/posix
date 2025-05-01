@@ -1,4 +1,4 @@
-package illusory0x0/posix/examples/41-confstr
+package "illusory0x0/posix/examples/41-confstr"
 
 // Values
 

@@ -1,4 +1,4 @@
-package illusory0x0/posix/examples/00-template
+package "illusory0x0/posix/examples/00-template"
 
 // Values
 

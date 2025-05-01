@@ -1,4 +1,4 @@
-package illusory0x0/posix/examples/05-fputc
+package "illusory0x0/posix/examples/05-fputc"
 
 // Values
 

@@ -1,4 +1,4 @@
-package illusory0x0/posix/examples/07-fputs
+package "illusory0x0/posix/examples/07-fputs"
 
 // Values
 

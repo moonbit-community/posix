@@ -1,4 +1,4 @@
-package illusory0x0/posix/examples/10-ungetc-fgetc
+package "illusory0x0/posix/examples/10-ungetc-fgetc"
 
 // Values
 

@@ -1,4 +1,4 @@
-package illusory0x0/posix/examples/40-getgroups
+package "illusory0x0/posix/examples/40-getgroups"
 
 // Values
 

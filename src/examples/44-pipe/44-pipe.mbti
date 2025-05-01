@@ -1,4 +1,4 @@
-package illusory0x0/posix/examples/44-pipe
+package "illusory0x0/posix/examples/44-pipe"
 
 // Values
 

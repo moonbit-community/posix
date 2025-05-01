@@ -1,4 +1,4 @@
-package illusory0x0/posix/examples/26-linkat
+package "illusory0x0/posix/examples/26-linkat"
 
 // Values
 
