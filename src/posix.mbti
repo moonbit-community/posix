@@ -5,6 +5,150 @@ import(
 )
 
 // Values
+const E2BIG : Int = 7
+
+const EACCES : Int = 13
+
+const EADV : Int = 68
+
+const EAGAIN : Int = 11
+
+const EBADE : Int = 52
+
+const EBADF : Int = 9
+
+const EBADR : Int = 53
+
+const EBADRQC : Int = 56
+
+const EBADSLT : Int = 57
+
+const EBFONT : Int = 59
+
+const EBUSY : Int = 16
+
+const ECHILD : Int = 10
+
+const ECHRNG : Int = 44
+
+const ECOMM : Int = 70
+
+const EDEADLK : Int = 35
+
+const EDEADLOCK : Int = 35
+
+const EDOM : Int = 33
+
+const EEXIST : Int = 17
+
+const EFAULT : Int = 14
+
+const EFBIG : Int = 27
+
+const EIDRM : Int = 43
+
+const EINTR : Int = 4
+
+const EINVAL : Int = 22
+
+const EIO : Int = 5
+
+const EISDIR : Int = 21
+
+const EL2HLT : Int = 51
+
+const EL2NSYNC : Int = 45
+
+const EL3HLT : Int = 46
+
+const EL3RST : Int = 47
+
+const ELNRNG : Int = 48
+
+const ELOOP : Int = 40
+
+const EMFILE : Int = 24
+
+const EMLINK : Int = 31
+
+const EMULTIHOP : Int = 72
+
+const ENAMETOOLONG : Int = 36
+
+const ENFILE : Int = 23
+
+const ENOANO : Int = 55
+
+const ENOCSI : Int = 50
+
+const ENODATA : Int = 61
+
+const ENODEV : Int = 19
+
+const ENOENT : Int = 2
+
+const ENOEXEC : Int = 8
+
+const ENOLCK : Int = 37
+
+const ENOLINK : Int = 67
+
+const ENOMEM : Int = 12
+
+const ENOMSG : Int = 42
+
+const ENONET : Int = 64
+
+const ENOPKG : Int = 65
+
+const ENOSPC : Int = 28
+
+const ENOSR : Int = 63
+
+const ENOSTR : Int = 60
+
+const ENOSYS : Int = 38
+
+const ENOTBLK : Int = 15
+
+const ENOTDIR : Int = 20
+
+const ENOTEMPTY : Int = 39
+
+const ENOTTY : Int = 25
+
+const ENXIO : Int = 6
+
+const EPERM : Int = 1
+
+const EPIPE : Int = 32
+
+const EPROTO : Int = 71
+
+const ERANGE : Int = 34
+
+const EREMOTE : Int = 66
+
+const EROFS : Int = 30
+
+const ESPIPE : Int = 29
+
+const ESRCH : Int = 3
+
+const ESRMNT : Int = 69
+
+const ETIME : Int = 62
+
+const ETXTBSY : Int = 26
+
+const EUNATCH : Int = 49
+
+const EWOULDBLOCK : Int = 11
+
+const EXDEV : Int = 18
+
+const EXFULL : Int = 54
+
 let _cs_path : Int
 
 let _cs_posix_v6_ilp32_off32_cflags : Int
@@ -379,275 +523,7 @@ fn dup(Fd) -> Fd
 
 fn dup2(Fd, Fd) -> Fd
 
-let e2big : Errno
-
-let eacces : Errno
-
-let eaddrinuse : Errno
-
-let eaddrnotavail : Errno
-
-let eadv : Errno
-
-let eafnosupport : Errno
-
-let eagain : Errno
-
-let ealready : Errno
-
-let ebade : Errno
-
-let ebadf : Errno
-
-let ebadfd : Errno
-
-let ebadmsg : Errno
-
-let ebadr : Errno
-
-let ebadrqc : Errno
-
-let ebadslt : Errno
-
-let ebfont : Errno
-
-let ebusy : Errno
-
-let ecanceled : Errno
-
-let echild : Errno
-
-let echrng : Errno
-
-let ecomm : Errno
-
-let econnaborted : Errno
-
-let econnrefused : Errno
-
-let econnreset : Errno
-
-let edeadlk : Errno
-
-let edeadlock : Errno
-
-let edestaddrreq : Errno
-
-let edom : Errno
-
-let edotdot : Errno
-
-let edquot : Errno
-
-let eexist : Errno
-
-let efault : Errno
-
-let efbig : Errno
-
-let ehostdown : Errno
-
-let ehostunreach : Errno
-
-let ehwpoison : Errno
-
-let eidrm : Errno
-
-let eilseq : Errno
-
-let einprogress : Errno
-
-let eintr : Errno
-
-let einval : Errno
-
-let eio : Errno
-
-let eisconn : Errno
-
-let eisdir : Errno
-
-let eisnam : Errno
-
-let ekeyexpired : Errno
-
-let ekeyrejected : Errno
-
-let ekeyrevoked : Errno
-
-let el2hlt : Errno
-
-let el2nsync : Errno
-
-let el3hlt : Errno
-
-let el3rst : Errno
-
-let elibacc : Errno
-
-let elibbad : Errno
-
-let elibexec : Errno
-
-let elibmax : Errno
-
-let elibscn : Errno
-
-let elnrng : Errno
-
-let eloop : Errno
-
-let emediumtype : Errno
-
-let emfile : Errno
-
-let emlink : Errno
-
-let emsgsize : Errno
-
-let emultihop : Errno
-
-let enametoolong : Errno
-
-let enavail : Errno
-
-let enetdown : Errno
-
-let enetreset : Errno
-
-let enetunreach : Errno
-
-let enfile : Errno
-
-let enoano : Errno
-
-let enobufs : Errno
-
-let enocsi : Errno
-
-let enodata : Errno
-
-let enodev : Errno
-
-let enoent : Errno
-
-let enoexec : Errno
-
-let enokey : Errno
-
-let enolck : Errno
-
-let enolink : Errno
-
-let enomedium : Errno
-
-let enomem : Errno
-
-let enomsg : Errno
-
-let enonet : Errno
-
-let enopkg : Errno
-
-let enoprotoopt : Errno
-
-let enospc : Errno
-
-let enosr : Errno
-
-let enostr : Errno
-
-let enosys : Errno
-
-let enotblk : Errno
-
-let enotconn : Errno
-
-let enotdir : Errno
-
-let enotempty : Errno
-
-let enotnam : Errno
-
-let enotrecoverable : Errno
-
-let enotsock : Errno
-
-let enotsup : Errno
-
-let enotty : Errno
-
-let enotuniq : Errno
-
-let enxio : Errno
-
 let eof : FRslt
-
-let eopnotsupp : Errno
-
-let eoverflow : Errno
-
-let eownerdead : Errno
-
-let eperm : Errno
-
-let epfnosupport : Errno
-
-let epipe : Errno
-
-let eproto : Errno
-
-let eprotonosupport : Errno
-
-let eprototype : Errno
-
-let erange : Errno
-
-let eremchg : Errno
-
-let eremote : Errno
-
-let eremoteio : Errno
-
-let erestart : Errno
-
-let erfkill : Errno
-
-let erofs : Errno
-
-let eshutdown : Errno
-
-let esocktnosupport : Errno
-
-let espipe : Errno
-
-let esrch : Errno
-
-let esrmnt : Errno
-
-let estale : Errno
-
-let estrpipe : Errno
-
-let etime : Errno
-
-let etimedout : Errno
-
-let etoomanyrefs : Errno
-
-let etxtbsy : Errno
-
-let euclean : Errno
-
-let eunatch : Errno
-
-let eusers : Errno
-
-let ewouldblock : Errno
-
-let exdev : Errno
-
-let exfull : Errno
 
 let f_dupfd : FcntlCmd
 
@@ -721,7 +597,7 @@ fn ftruncate(Fd, Int) -> Rslt
 
 fn fwrite(@native.ConstPtr[Byte], UInt64, UInt64, @native.Ptr[FILE]) -> UInt64
 
-fn get_errno() -> Errno
+fn get_errno() -> Int
 
 fn getcwd(@native.Ptr[Byte], UInt64) -> @native.Ptr[Byte]
 
@@ -855,7 +731,7 @@ let seek_end : Whence
 
 let seek_set : Whence
 
-fn set_errno(Errno) -> Unit
+fn set_errno(Int) -> Unit
 
 fn setegid(Gid) -> Rslt
 
@@ -920,11 +796,6 @@ impl Eq for BufMode
 impl Show for BufMode
 
 type DIR
-
-type Errno
-impl Default for Errno
-impl Eq for Errno
-impl Show for Errno
 
 type FILE
 

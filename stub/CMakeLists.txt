@@ -18,7 +18,7 @@ set(SOURCE_SYS
 
 set(SOURCE_ROOT
   src/dirent.c
-  src/errno.c
+  # src/errno.c
   src/fcntl.c
   src/grp.c
   src/signal.c
