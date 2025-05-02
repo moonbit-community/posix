@@ -213,4 +213,189 @@ pub const EPROTO = 71
 
 ///| EMULTIHOP 72 Multihop attempted
 pub const EMULTIHOP = 72
+
 ///| EDOTDOT 73 RFS specific error
+pub const EDOTDOT = 73
+
+///| EBADMSG 74 Bad message
+pub const EBADMSG = 74
+
+///| EOVERFLOW 75 Value too large for defined data type
+pub const EOVERFLOW = 75
+
+///| ENOTUNIQ 76 Name not unique on network
+pub const ENOTUNIQ = 76
+
+///| EBADFD 77 File descriptor in bad state
+pub const EBADFD = 77
+
+///| EREMCHG 78 Remote address changed
+pub const EREMCHG = 78
+
+///| ELIBACC 79 Can not access a needed shared library
+pub const ELIBACC = 79
+
+///| ELIBBAD 80 Accessing a corrupted shared library
+pub const ELIBBAD = 80
+
+///| ELIBSCN 81 .lib section in a.out corrupted
+pub const ELIBSCN = 81
+
+///| ELIBMAX 82 Attempting to link in too many shared libraries
+pub const ELIBMAX = 82
+
+///| ELIBEXEC 83 Cannot exec a shared library directly
+pub const ELIBEXEC = 83
+
+///| EILSEQ 84 Invalid or incomplete multibyte or wide character
+pub const EILSEQ = 84
+
+///| ERESTART 85 Interrupted system call should be restarted
+pub const ERESTART = 85
+
+///| ESTRPIPE 86 Streams pipe error
+pub const ESTRPIPE = 86
+
+///| EUSERS 87 Too many users
+pub const EUSERS = 87
+
+///| ENOTSOCK 88 Socket operation on non-socket
+pub const ENOTSOCK = 88
+
+///| EDESTADDRREQ 89 Destination address required
+pub const EDESTADDRREQ = 89
+
+///| EMSGSIZE 90 Message too long
+pub const EMSGSIZE = 90
+
+///| EPROTOTYPE 91 Protocol wrong type for socket
+pub const EPROTOTYPE = 91
+
+///| ENOPROTOOPT 92 Protocol not available
+pub const ENOPROTOOPT = 92
+
+///| EPROTONOSUPPORT 93 Protocol not supported
+pub const EPROTONOSUPPORT = 93
+
+///| ESOCKTNOSUPPORT 94 Socket type not supported
+pub const ESOCKTNOSUPPORT = 94
+
+///| EOPNOTSUPP 95 Operation not supported
+pub const EOPNOTSUPP = 95
+
+///| EPFNOSUPPORT 96 Protocol family not supported
+pub const EPFNOSUPPORT = 96
+
+///| EAFNOSUPPORT 97 Address family not supported by protocol
+pub const EAFNOSUPPORT = 97
+
+///| EADDRINUSE 98 Address already in use
+pub const EADDRINUSE = 98
+
+///| EADDRNOTAVAIL 99 Cannot assign requested address
+pub const EADDRNOTAVAIL = 99
+
+///| ENETDOWN 100 Network is down
+pub const ENETDOWN = 100
+
+///| ENETUNREACH 101 Network is unreachable
+pub const ENETUNREACH = 101
+
+///| ENETRESET 102 Network dropped connection on reset
+pub const ENETRESET = 102
+
+///| ECONNABORTED 103 Software caused connection abort
+pub const ECONNABORTED = 103
+
+///| ECONNRESET 104 Connection reset by peer
+pub const ECONNRESET = 104
+
+///| ENOBUFS 105 No buffer space available
+pub const ENOBUFS = 105
+
+///| EISCONN 106 Transport endpoint is already connected
+pub const EISCONN = 106
+
+///| ENOTCONN 107 Transport endpoint is not connected
+pub const ENOTCONN = 107
+
+///| ESHUTDOWN 108 Cannot send after transport endpoint shutdown
+pub const ESHUTDOWN = 108
+
+///| ETOOMANYREFS 109 Too many references: cannot splice
+pub const ETOOMANYREFS = 109
+
+///| ETIMEDOUT 110 Connection timed out
+pub const ETIMEDOUT = 110
+
+///| ECONNREFUSED 111 Connection refused
+pub const ECONNREFUSED = 111
+
+///| EHOSTDOWN 112 Host is down
+pub const EHOSTDOWN = 112
+
+///| EHOSTUNREACH 113 No route to host
+pub const EHOSTUNREACH = 113
+
+///| EALREADY 114 Operation already in progress
+pub const EALREADY = 114
+
+///| EINPROGRESS 115 Operation now in progress
+pub const EINPROGRESS = 115
+
+///| ESTALE 116 Stale file handle
+pub const ESTALE = 116
+
+///| EUCLEAN 117 Structure needs cleaning
+pub const EUCLEAN = 117
+
+///| ENOTNAM 118 Not a XENIX named type file
+pub const ENOTNAM = 118
+
+///| ENAVAIL 119 No XENIX semaphores available
+pub const ENAVAIL = 119
+
+///| EISNAM 120 Is a named type file
+pub const EISNAM = 120
+
+///| EREMOTEIO 121 Remote I/O error
+pub const EREMOTEIO = 121
+
+///| EDQUOT 122 Disk quota exceeded
+pub const EDQUOT = 122
+
+///| ENOMEDIUM 123 No medium found
+pub const ENOMEDIUM = 123
+
+///| EMEDIUMTYPE 124 Wrong medium type
+pub const EMEDIUMTYPE = 124
+
+///| ECANCELED 125 Operation canceled
+pub const ECANCELED = 125
+
+///| ENOKEY 126 Required key not available
+pub const ENOKEY = 126
+
+///| EKEYEXPIRED 127 Key has expired
+pub const EKEYEXPIRED = 127
+
+///| EKEYREVOKED 128 Key has been revoked
+pub const EKEYREVOKED = 128
+
+///| EKEYREJECTED 129 Key was rejected by service
+pub const EKEYREJECTED = 129
+
+///| EOWNERDEAD 130 Owner died
+pub const EOWNERDEAD = 130
+
+///| ENOTRECOVERABLE 131 State not recoverable
+pub const ENOTRECOVERABLE = 131
+
+///| ERFKILL 132 Operation not possible due to RF-kill
+pub const ERFKILL = 132
+
+///| EHWPOISON 133 Memory page has hardware error
+pub const EHWPOISON = 133
+
+///| ENOTSUP 95 Operation not supported
+pub const ENOTSUP = 95
