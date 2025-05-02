@@ -9,13 +9,25 @@ const E2BIG : Int = 7
 
 const EACCES : Int = 13
 
+const EADDRINUSE : Int = 98
+
+const EADDRNOTAVAIL : Int = 99
+
 const EADV : Int = 68
 
+const EAFNOSUPPORT : Int = 97
+
 const EAGAIN : Int = 11
+
+const EALREADY : Int = 114
 
 const EBADE : Int = 52
 
 const EBADF : Int = 9
+
+const EBADFD : Int = 77
+
+const EBADMSG : Int = 74
 
 const EBADR : Int = 53
 
@@ -27,17 +39,31 @@ const EBFONT : Int = 59
 
 const EBUSY : Int = 16
 
+const ECANCELED : Int = 125
+
 const ECHILD : Int = 10
 
 const ECHRNG : Int = 44
 
 const ECOMM : Int = 70
 
+const ECONNABORTED : Int = 103
+
+const ECONNREFUSED : Int = 111
+
+const ECONNRESET : Int = 104
+
 const EDEADLK : Int = 35
 
 const EDEADLOCK : Int = 35
 
+const EDESTADDRREQ : Int = 89
+
 const EDOM : Int = 33
+
+const EDOTDOT : Int = 73
+
+const EDQUOT : Int = 122
 
 const EEXIST : Int = 17
 
@@ -45,7 +71,17 @@ const EFAULT : Int = 14
 
 const EFBIG : Int = 27
 
+const EHOSTDOWN : Int = 112
+
+const EHOSTUNREACH : Int = 113
+
+const EHWPOISON : Int = 133
+
 const EIDRM : Int = 43
+
+const EILSEQ : Int = 84
+
+const EINPROGRESS : Int = 115
 
 const EINTR : Int = 4
 
@@ -53,7 +89,17 @@ const EINVAL : Int = 22
 
 const EIO : Int = 5
 
+const EISCONN : Int = 106
+
 const EISDIR : Int = 21
+
+const EISNAM : Int = 120
+
+const EKEYEXPIRED : Int = 127
+
+const EKEYREJECTED : Int = 129
+
+const EKEYREVOKED : Int = 128
 
 const EL2HLT : Int = 51
 
@@ -63,21 +109,45 @@ const EL3HLT : Int = 46
 
 const EL3RST : Int = 47
 
+const ELIBACC : Int = 79
+
+const ELIBBAD : Int = 80
+
+const ELIBEXEC : Int = 83
+
+const ELIBMAX : Int = 82
+
+const ELIBSCN : Int = 81
+
 const ELNRNG : Int = 48
 
 const ELOOP : Int = 40
+
+const EMEDIUMTYPE : Int = 124
 
 const EMFILE : Int = 24
 
 const EMLINK : Int = 31
 
+const EMSGSIZE : Int = 90
+
 const EMULTIHOP : Int = 72
 
 const ENAMETOOLONG : Int = 36
 
+const ENAVAIL : Int = 119
+
+const ENETDOWN : Int = 100
+
+const ENETRESET : Int = 102
+
+const ENETUNREACH : Int = 101
+
 const ENFILE : Int = 23
 
 const ENOANO : Int = 55
+
+const ENOBUFS : Int = 105
 
 const ENOCSI : Int = 50
 
@@ -89,9 +159,13 @@ const ENOENT : Int = 2
 
 const ENOEXEC : Int = 8
 
+const ENOKEY : Int = 126
+
 const ENOLCK : Int = 37
 
 const ENOLINK : Int = 67
+
+const ENOMEDIUM : Int = 123
 
 const ENOMEM : Int = 12
 
@@ -100,6 +174,8 @@ const ENOMSG : Int = 42
 const ENONET : Int = 64
 
 const ENOPKG : Int = 65
+
+const ENOPROTOOPT : Int = 92
 
 const ENOSPC : Int = 28
 
@@ -111,25 +187,61 @@ const ENOSYS : Int = 38
 
 const ENOTBLK : Int = 15
 
+const ENOTCONN : Int = 107
+
 const ENOTDIR : Int = 20
 
 const ENOTEMPTY : Int = 39
 
+const ENOTNAM : Int = 118
+
+const ENOTRECOVERABLE : Int = 131
+
+const ENOTSOCK : Int = 88
+
+const ENOTSUP : Int = 95
+
 const ENOTTY : Int = 25
+
+const ENOTUNIQ : Int = 76
 
 const ENXIO : Int = 6
 
+const EOPNOTSUPP : Int = 95
+
+const EOVERFLOW : Int = 75
+
+const EOWNERDEAD : Int = 130
+
 const EPERM : Int = 1
+
+const EPFNOSUPPORT : Int = 96
 
 const EPIPE : Int = 32
 
 const EPROTO : Int = 71
 
+const EPROTONOSUPPORT : Int = 93
+
+const EPROTOTYPE : Int = 91
+
 const ERANGE : Int = 34
+
+const EREMCHG : Int = 78
 
 const EREMOTE : Int = 66
 
+const EREMOTEIO : Int = 121
+
+const ERESTART : Int = 85
+
+const ERFKILL : Int = 132
+
 const EROFS : Int = 30
+
+const ESHUTDOWN : Int = 108
+
+const ESOCKTNOSUPPORT : Int = 94
 
 const ESPIPE : Int = 29
 
@@ -137,11 +249,23 @@ const ESRCH : Int = 3
 
 const ESRMNT : Int = 69
 
+const ESTALE : Int = 116
+
+const ESTRPIPE : Int = 86
+
 const ETIME : Int = 62
+
+const ETIMEDOUT : Int = 110
+
+const ETOOMANYREFS : Int = 109
 
 const ETXTBSY : Int = 26
 
+const EUCLEAN : Int = 117
+
 const EUNATCH : Int = 49
+
+const EUSERS : Int = 87
 
 const EWOULDBLOCK : Int = 11
 
