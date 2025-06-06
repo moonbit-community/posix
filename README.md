@@ -10,7 +10,7 @@ Currently waiting for official build system and FFI toolchain support. FFI Tools
 
 In [/src/example](https://github.com/moonbit-community/posix/tree/master/src/examples) directory provides a number of useful examples.
 
-Currently supported interfaces can be viewed at [posix.mbti](https://github.com/moonbit-community/posix/blob/master/src/posix.mbti)
+Currently supported interfaces can be viewed at [posix.mbti](https://github.com/moonbit-community/posix/blob/master/src/posix/posix.mbti)
 
 
 ## Usage 
