@@ -27,17 +27,17 @@ type Sid Int derive(Default, Eq, Show)
 
 ///|
 pub fn Sid::is_error(self : Sid) -> Bool {
-  self._ == -1
+  self.inner() == -1
 }
 
 ///|
-typealias OptSize = Int64
+typealias Int64 as OptSize
 
 ///|
-typealias Off = Int64
+typealias Int64 as Off
 
 ///|
-typealias Size = UInt64
+typealias UInt64 as Size
 
 ///|
 type Mode UInt derive(Default, Eq, Show) // TODO
@@ -47,12 +47,12 @@ type Rslt Int derive(Default, Eq, Show)
 
 ///|
 pub fn Rslt::is_success(x : Rslt) -> Bool {
-  x._ == 0
+  x.inner() == 0
 }
 
 ///|
 pub fn Rslt::is_error(x : Rslt) -> Bool {
-  x._ == -1
+  x.inner() == -1
 }
 
 ///|
@@ -62,7 +62,7 @@ type FRslt Int derive(Default, Eq, Show)
 type Signal Int derive(Default, Eq, Show)
 
 ///|
-typealias Errno = Int
+typealias Int as Errno
 
 ///|
 type AtFlag Int derive(Default, Eq, Show)
@@ -84,10 +84,10 @@ type AccessMode Int derive(Default, Eq, Show)
 
 ///|
 pub fn Pid::is_child(self : Pid) -> Bool {
-  self._ == 0
+  self.inner() == 0
 }
 
 ///|
 pub fn Pid::is_error(self : Pid) -> Bool {
-  self._ == -1
+  self.inner() == -1
 }

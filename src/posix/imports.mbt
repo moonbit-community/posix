@@ -1,14 +1,11 @@
 ///|
-pub typealias CString = @native.MCStr
+pub typealias @native.CStr
 
 ///|
-pub typealias CStr = @native.CStr
+pub typealias @native.Ptr
 
 ///|
-pub typealias Ptr[T] = @native.Ptr[T]
+pub typealias @native.ConstPtr
 
 ///|
-pub typealias ConstPtr[T] = @native.ConstPtr[T]
-
-///|
-pub typealias Rc[T] = @native.Rc[T]
+pub typealias @native.Rc
