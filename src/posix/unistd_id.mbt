@@ -1,4 +1,5 @@
 // groups id
+
 ///| https://man7.org/linux/man-pages/man2/getgid.2.html
 pub extern "c" fn getgid() -> Gid = "moonbit_posix_getgid"
 
@@ -26,6 +27,7 @@ pub extern "c" fn setuid(uid : Uid) -> Rslt = "moonbit_posix_setuid"
 pub extern "c" fn seteuid(uid : Uid) -> Rslt = "moonbit_posix_seteuid"
 
 // process groups id
+
 ///| https://man7.org/linux/man-pages/man3/setpgid.3p.html
 pub extern "c" fn setpgid(pid : Pid, pgid : Pid) -> Rslt = "moonbit_posix_setpgid"
 
@@ -33,6 +35,7 @@ pub extern "c" fn setpgid(pid : Pid, pgid : Pid) -> Rslt = "moonbit_posix_setpgi
 pub extern "c" fn getpgid(pid : Pid) -> Pid = "moonbit_posix_getpgid"
 
 // session id
+
 ///| https://man7.org/linux/man-pages/man2/getsid.2.html
 pub extern "c" fn getsid(pid : Pid) -> Sid = "moonbit_posix_getsid"
 

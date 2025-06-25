@@ -924,9 +924,7 @@ type DIR
 type FILE
 
 type FRslt
-impl FRslt {
-  to_char(Self) -> Unit
-}
+fn FRslt::to_char(Self) -> Unit
 impl Default for FRslt
 impl Eq for FRslt
 impl Show for FRslt
@@ -942,9 +940,7 @@ impl Eq for Fd
 impl Show for Fd
 
 type Gid
-impl Gid {
-  unsafe_from_uint(UInt) -> Self
-}
+fn Gid::unsafe_from_uint(UInt) -> Self
 impl Default for Gid
 impl Eq for Gid
 impl Show for Gid
@@ -962,29 +958,23 @@ impl Eq for OpenFlag
 impl Show for OpenFlag
 
 type Pid
-impl Pid {
-  is_child(Self) -> Bool
-  is_error(Self) -> Bool
-  unsafe_from_int(Int) -> Self
-}
+fn Pid::is_child(Self) -> Bool
+fn Pid::is_error(Self) -> Bool
+fn Pid::unsafe_from_int(Int) -> Self
 impl Default for Pid
 impl Eq for Pid
 impl Show for Pid
 
 type Rslt
-impl Rslt {
-  is_error(Self) -> Bool
-  is_success(Self) -> Bool
-}
+fn Rslt::is_error(Self) -> Bool
+fn Rslt::is_success(Self) -> Bool
 impl Default for Rslt
 impl Eq for Rslt
 impl Show for Rslt
 
 type Sid
-impl Sid {
-  is_error(Self) -> Bool
-  unsafe_from_uint(UInt) -> Self
-}
+fn Sid::is_error(Self) -> Bool
+fn Sid::unsafe_from_uint(UInt) -> Self
 impl Default for Sid
 impl Eq for Sid
 impl Show for Sid
@@ -995,9 +985,7 @@ impl Eq for Signal
 impl Show for Signal
 
 type Uid
-impl Uid {
-  unsafe_from_uint(UInt) -> Self
-}
+fn Uid::unsafe_from_uint(UInt) -> Self
 impl Default for Uid
 impl Eq for Uid
 impl Show for Uid
@@ -1008,15 +996,13 @@ impl Eq for Whence
 impl Show for Whence
 
 // Type aliases
-pub typealias CStr = @native.CStr
+pub typealias @native.CStr as CStr
 
-pub typealias CString = @native.MCStr
+pub typealias @native.ConstPtr as ConstPtr
 
-pub typealias ConstPtr[T] = @native.ConstPtr[T]
+pub typealias @native.Ptr as Ptr
 
-pub typealias Ptr[T] = @native.Ptr[T]
-
-pub typealias Rc[T] = @native.Rc[T]
+pub typealias @native.Rc as Rc
 
 // Traits
 
