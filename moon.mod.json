@@ -1,6 +1,6 @@
 {
   "name": "illusory0x0/posix",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "deps": {
     "illusory0x0/native": "0.2.1"
   },
