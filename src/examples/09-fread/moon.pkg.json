@@ -1,5 +1,5 @@
 {
-  "is-main": true,
+  "is-main": false,
   "import": ["illusory0x0/native", "illusory0x0/posix/posix"],
   "link": {
     "native": {
