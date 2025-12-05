@@ -15,5 +15,6 @@
     "FFI"
   ],
   "description": "a simple posix API FFI library",
-  "source": "src"
+  "source": "src",
+  "preferred-target": "native"
 }
