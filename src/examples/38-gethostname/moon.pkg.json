@@ -1,14 +1,21 @@
 {
   "is-main": true,
-  "import": ["illusory0x0/native", "illusory0x0/posix/posix"],
+  "import": [
+    "illusory0x0/native",
+    "illusory0x0/posix/posix"
+  ],
   "link": {
     "native": {
       "cc-flags": "-fwrapv -fsanitize=address -fsanitize=undefined"
     }
   },
   "warn-list": "-1-2-3-6-29",
-  "supported-targets": ["native"],
+  "supported-targets": [
+    "native"
+  ],
   "targets": {
-    "main.mbt": ["native"]
+    "main.mbt": [
+      "native"
+    ]
   }
 }
