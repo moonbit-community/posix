@@ -1,6 +1,10 @@
 // Generated using `moon info`, DON'T EDIT IT
 package "illusory0x0/posix/posix"
 
+import(
+  "illusory0x0/native"
+)
+
 // Values
 pub const E2BIG : Int = 7
 
@@ -270,11 +274,736 @@ pub const EXDEV : Int = 18
 
 pub const EXFULL : Int = 54
 
+pub let _cs_path : Int
+
+pub let _cs_posix_v6_ilp32_off32_cflags : Int
+
+pub let _cs_posix_v6_ilp32_off32_ldflags : Int
+
+pub let _cs_posix_v6_ilp32_off32_libs : Int
+
+pub let _cs_posix_v6_ilp32_offbig_cflags : Int
+
+pub let _cs_posix_v6_ilp32_offbig_ldflags : Int
+
+pub let _cs_posix_v6_ilp32_offbig_libs : Int
+
+pub let _cs_posix_v6_lp64_off64_cflags : Int
+
+pub let _cs_posix_v6_lp64_off64_ldflags : Int
+
+pub let _cs_posix_v6_lp64_off64_libs : Int
+
+pub let _cs_posix_v6_lpbig_offbig_cflags : Int
+
+pub let _cs_posix_v6_lpbig_offbig_ldflags : Int
+
+pub let _cs_posix_v6_lpbig_offbig_libs : Int
+
+pub let _cs_posix_v6_width_restricted_envs : Int
+
+pub let _cs_posix_v7_ilp32_off32_cflags : Int
+
+pub let _cs_posix_v7_ilp32_off32_ldflags : Int
+
+pub let _cs_posix_v7_ilp32_off32_libs : Int
+
+pub let _cs_posix_v7_ilp32_offbig_cflags : Int
+
+pub let _cs_posix_v7_ilp32_offbig_ldflags : Int
+
+pub let _cs_posix_v7_ilp32_offbig_libs : Int
+
+pub let _cs_posix_v7_lp64_off64_cflags : Int
+
+pub let _cs_posix_v7_lp64_off64_ldflags : Int
+
+pub let _cs_posix_v7_lp64_off64_libs : Int
+
+pub let _cs_posix_v7_lpbig_offbig_cflags : Int
+
+pub let _cs_posix_v7_lpbig_offbig_ldflags : Int
+
+pub let _cs_posix_v7_lpbig_offbig_libs : Int
+
+pub let _cs_posix_v7_width_restricted_envs : Int
+
+pub let _cs_v6_env : Int
+
+pub let _cs_v7_env : Int
+
+pub let _iofbf : BufMode
+
+pub let _iolbf : BufMode
+
+pub let _ionbf : BufMode
+
+pub let _pc_2_symlinks : Int
+
+pub let _pc_alloc_size_min : Int
+
+pub let _pc_async_io : Int
+
+pub let _pc_chown_restricted : Int
+
+pub let _pc_filesizebits : Int
+
+pub let _pc_link_max : Int
+
+pub let _pc_max_canon : Int
+
+pub let _pc_max_input : Int
+
+pub let _pc_name_max : Int
+
+pub let _pc_no_trunc : Int
+
+pub let _pc_path_max : Int
+
+pub let _pc_pipe_buf : Int
+
+pub let _pc_prio_io : Int
+
+pub let _pc_rec_incr_xfer_size : Int
+
+pub let _pc_rec_max_xfer_size : Int
+
+pub let _pc_rec_min_xfer_size : Int
+
+pub let _pc_rec_xfer_align : Int
+
+pub let _pc_symlink_max : Int
+
+pub let _pc_sync_io : Int
+
+pub let _pc_vdisable : Int
+
+pub let _sc_2_c_bind : Int
+
+pub let _sc_2_c_dev : Int
+
+pub let _sc_2_char_term : Int
+
+pub let _sc_2_fort_dev : Int
+
+pub let _sc_2_fort_run : Int
+
+pub let _sc_2_localedef : Int
+
+pub let _sc_2_pbs : Int
+
+pub let _sc_2_pbs_accounting : Int
+
+pub let _sc_2_pbs_checkpoint : Int
+
+pub let _sc_2_pbs_locate : Int
+
+pub let _sc_2_pbs_message : Int
+
+pub let _sc_2_pbs_track : Int
+
+pub let _sc_2_sw_dev : Int
+
+pub let _sc_2_upe : Int
+
+pub let _sc_2_version : Int
+
+pub let _sc_advisory_info : Int
+
+pub let _sc_aio_listio_max : Int
+
+pub let _sc_aio_max : Int
+
+pub let _sc_aio_prio_delta_max : Int
+
+pub let _sc_arg_max : Int
+
+pub let _sc_asynchronous_io : Int
+
+pub let _sc_atexit_max : Int
+
+pub let _sc_barriers : Int
+
+pub let _sc_bc_base_max : Int
+
+pub let _sc_bc_dim_max : Int
+
+pub let _sc_bc_scale_max : Int
+
+pub let _sc_bc_string_max : Int
+
+pub let _sc_child_max : Int
+
+pub let _sc_clk_tck : Int
+
+pub let _sc_clock_selection : Int
+
+pub let _sc_coll_weights_max : Int
+
+pub let _sc_cputime : Int
+
+pub let _sc_delaytimer_max : Int
+
+pub let _sc_expr_nest_max : Int
+
+pub let _sc_fsync : Int
+
+pub let _sc_getgr_r_size_max : Int
+
+pub let _sc_getpw_r_size_max : Int
+
+pub let _sc_host_name_max : Int
+
+pub let _sc_iov_max : Int
+
+pub let _sc_ipv6 : Int
+
+pub let _sc_job_control : Int
+
+pub let _sc_line_max : Int
+
+pub let _sc_login_name_max : Int
+
+pub let _sc_mapped_files : Int
+
+pub let _sc_memlock : Int
+
+pub let _sc_memlock_range : Int
+
+pub let _sc_memory_protection : Int
+
+pub let _sc_message_passing : Int
+
+pub let _sc_monotonic_clock : Int
+
+pub let _sc_mq_open_max : Int
+
+pub let _sc_mq_prio_max : Int
+
+pub let _sc_ngroups_max : Int
+
+pub let _sc_open_max : Int
+
+pub let _sc_page_size : Int
+
+pub let _sc_pagesize : Int
+
+pub let _sc_prioritized_io : Int
+
+pub let _sc_priority_scheduling : Int
+
+pub let _sc_raw_sockets : Int
+
+pub let _sc_re_dup_max : Int
+
+pub let _sc_reader_writer_locks : Int
+
+pub let _sc_realtime_signals : Int
+
+pub let _sc_regexp : Int
+
+pub let _sc_rtsig_max : Int
+
+pub let _sc_saved_ids : Int
+
+pub let _sc_sem_nsems_max : Int
+
+pub let _sc_sem_value_max : Int
+
+pub let _sc_semaphores : Int
+
+pub let _sc_shared_memory_objects : Int
+
+pub let _sc_shell : Int
+
+pub let _sc_sigqueue_max : Int
+
+pub let _sc_spawn : Int
+
+pub let _sc_spin_locks : Int
+
+pub let _sc_sporadic_server : Int
+
+pub let _sc_ss_repl_max : Int
+
+pub let _sc_stream_max : Int
+
+pub let _sc_symloop_max : Int
+
+pub let _sc_synchronized_io : Int
+
+pub let _sc_thread_attr_stackaddr : Int
+
+pub let _sc_thread_attr_stacksize : Int
+
+pub let _sc_thread_cputime : Int
+
+pub let _sc_thread_destructor_iterations : Int
+
+pub let _sc_thread_keys_max : Int
+
+pub let _sc_thread_prio_inherit : Int
+
+pub let _sc_thread_prio_protect : Int
+
+pub let _sc_thread_priority_scheduling : Int
+
+pub let _sc_thread_process_shared : Int
+
+pub let _sc_thread_robust_prio_inherit : Int
+
+pub let _sc_thread_robust_prio_protect : Int
+
+pub let _sc_thread_safe_functions : Int
+
+pub let _sc_thread_sporadic_server : Int
+
+pub let _sc_thread_stack_min : Int
+
+pub let _sc_thread_threads_max : Int
+
+pub let _sc_threads : Int
+
+pub let _sc_timeouts : Int
+
+pub let _sc_timer_max : Int
+
+pub let _sc_timers : Int
+
+pub let _sc_trace : Int
+
+pub let _sc_trace_event_filter : Int
+
+pub let _sc_trace_event_name_max : Int
+
+pub let _sc_trace_inherit : Int
+
+pub let _sc_trace_log : Int
+
+pub let _sc_trace_name_max : Int
+
+pub let _sc_trace_sys_max : Int
+
+pub let _sc_trace_user_event_max : Int
+
+pub let _sc_tty_name_max : Int
+
+pub let _sc_typed_memory_objects : Int
+
+pub let _sc_tzname_max : Int
+
+pub let _sc_v6_ilp32_off32 : Int
+
+pub let _sc_v6_ilp32_offbig : Int
+
+pub let _sc_v6_lp64_off64 : Int
+
+pub let _sc_v6_lpbig_offbig : Int
+
+pub let _sc_v7_ilp32_off32 : Int
+
+pub let _sc_v7_ilp32_offbig : Int
+
+pub let _sc_v7_lp64_off64 : Int
+
+pub let _sc_v7_lpbig_offbig : Int
+
+pub let _sc_version : Int
+
+pub let _sc_xopen_crypt : Int
+
+pub let _sc_xopen_enh_i18n : Int
+
+pub let _sc_xopen_realtime : Int
+
+pub let _sc_xopen_realtime_threads : Int
+
+pub let _sc_xopen_shm : Int
+
+pub let _sc_xopen_streams : Int
+
+pub let _sc_xopen_unix : Int
+
+pub let _sc_xopen_version : Int
+
+pub let at_eaccess : AtFlag
+
+pub let at_fdcwd : Fd
+
+pub let at_removedir : AtFlag
+
+pub let at_symlink_follow : AtFlag
+
+pub let at_symlink_nofollow : AtFlag
+
+pub let bufsiz : UInt64
+
+pub fn close(Fd) -> Rslt
+
+pub fn confstr(Int, @native.Ptr[Byte], UInt64) -> UInt64
+
+pub let directory_default_mode : Mode
+
+pub fn dup(Fd) -> Fd
+
+pub fn dup2(Fd, Fd) -> Fd
+
+pub let eof : FRslt
+
+pub let f_dupfd : FcntlCmd
+
+pub let f_dupfd_cloexec : FcntlCmd
+
+pub let f_getfd : FcntlCmd
+
+pub let f_getfl : FcntlCmd
+
+pub let f_getlk : FcntlCmd
+
+pub let f_getown : FcntlCmd
+
+pub let f_ok : AccessMode
+
+pub let f_rdlck : FcntlCmd
+
+pub let f_setfd : FcntlCmd
+
+pub let f_setfl : FcntlCmd
+
+pub let f_setlk : FcntlCmd
+
+pub let f_setlkw : FcntlCmd
+
+pub let f_setown : FcntlCmd
+
+pub let f_unlck : FcntlCmd
+
+pub let f_wrlck : FcntlCmd
+
+pub fn faccessat(Fd, @native.CStr, AccessMode, AtFlag) -> Rslt
+
+pub fn fchdir(Fd) -> Rslt
+
+pub fn fchown(Fd, Uid, Gid) -> Rslt
+
+pub fn fchownat(Fd, @native.CStr, Uid, Gid, AtFlag) -> Rslt
+
+pub fn fclose(@native.Ptr[FILE]) -> FRslt
+
+pub let fd_cloexec : FcntlCmd
+
+pub fn fdatasync(Fd) -> Rslt
+
+pub fn fdopen(Fd, @native.CStr) -> @native.Ptr[FILE]
+
+pub fn fexecve(Fd, @native.ConstPtr[@native.CStr], @native.ConstPtr[@native.CStr]) -> Rslt
+
+pub fn fflush(@native.Ptr[FILE]) -> FRslt
+
+pub fn fgetc(@native.Ptr[FILE]) -> FRslt
+
+pub fn fgets(@native.Ptr[Byte], Int, @native.Ptr[FILE]) -> @native.Ptr[Byte]
+
+pub let file_default_mode : Mode
+
+pub fn fork() -> Pid
+
+pub fn fpathconf(Fd, Int) -> Int64
+
+pub fn fputc(Int, @native.Ptr[FILE]) -> FRslt
+
+pub fn fputs(@native.CStr, @native.Ptr[FILE]) -> FRslt
+
+pub fn fread(@native.Ptr[Byte], UInt64, UInt64, @native.Ptr[FILE]) -> UInt64
+
+pub fn fsync(Fd) -> Rslt
+
+pub fn ftruncate(Fd, Int) -> Rslt
+
+pub fn fwrite(@native.ConstPtr[Byte], UInt64, UInt64, @native.Ptr[FILE]) -> UInt64
+
+pub fn get_errno() -> Int
+
+pub fn getcwd(@native.Ptr[Byte], UInt64) -> @native.Ptr[Byte]
+
+pub fn getegid() -> Gid
+
+pub fn geteuid() -> Uid
+
+pub fn getgid() -> Gid
+
+pub fn getgroups(UInt64, @native.Ptr[Gid]) -> Int64
+
+pub fn gethostname(@native.Ptr[Byte], UInt64) -> Rslt
+
+pub fn getpgid(Pid) -> Pid
+
+pub fn getpid() -> Pid
+
+pub fn getppid() -> Pid
+
+pub fn getsid(Pid) -> Sid
+
+pub fn getuid() -> Uid
+
+pub fn isatty(Fd) -> Int
+
+pub fn linkat(Fd, @native.CStr, Fd, @native.CStr, AtFlag) -> Rslt
+
+pub fn lockf(Fd, Int, Int64) -> Rslt
+
+pub fn lseek(Fd, Int64, Whence) -> Int64
+
+pub fn mkdirat(Fd, @native.CStr, Mode) -> Rslt
+
+pub fn nice(Int) -> Rslt
+
+pub let o_accmode : OpenFlag
+
+pub let o_append : OpenFlag
+
+pub let o_cloexec : OpenFlag
+
+pub let o_creat : OpenFlag
+
+pub let o_directory : OpenFlag
+
+pub let o_dsync : OpenFlag
+
+pub let o_excl : OpenFlag
+
+pub let o_exec : OpenFlag
+
+pub let o_nocreat : OpenFlag
+
+pub let o_nofollow : OpenFlag
+
+pub let o_nonblock : OpenFlag
+
+pub let o_rdonly : OpenFlag
+
+pub let o_rdwr : OpenFlag
+
+pub let o_rsync : OpenFlag
+
+pub let o_sync : OpenFlag
+
+pub let o_trunc : OpenFlag
+
+pub let o_wronly : OpenFlag
+
+pub fn openat(Fd, @native.CStr, OpenFlag, Mode) -> Fd
+
+pub fn pause() -> Rslt
+
+pub fn pipe(@native.Ptr[Fd]) -> Rslt
+
+pub fn pread(Fd, @native.Ptr[Byte], UInt64, Int64) -> Rslt
+
+pub fn pwrite(Fd, @native.ConstPtr[Byte], UInt64, Int64) -> Rslt
+
+pub let r_ok : AccessMode
+
+pub fn read(Fd, @native.Ptr[Byte], UInt64) -> Int64
+
+pub let s_ifblk : Mode
+
+pub let s_ifchr : Mode
+
+pub let s_ifdir : Mode
+
+pub let s_ififo : Mode
+
+pub let s_iflnk : Mode
+
+pub let s_ifmt : Mode
+
+pub let s_ifreg : Mode
+
+pub let s_irgrp : Mode
+
+pub let s_iroth : Mode
+
+pub let s_irusr : Mode
+
+pub let s_irwxg : Mode
+
+pub let s_irwxo : Mode
+
+pub let s_irwxu : Mode
+
+pub let s_isgid : Mode
+
+pub let s_issvt : Mode
+
+pub let s_isuid : Mode
+
+pub let s_iwgrp : Mode
+
+pub let s_iwoth : Mode
+
+pub let s_iwusr : Mode
+
+pub let s_ixgrp : Mode
+
+pub let s_ixoth : Mode
+
+pub let s_ixusr : Mode
+
+pub let seek_cur : Whence
+
+pub let seek_end : Whence
+
+pub let seek_set : Whence
+
+pub fn set_errno(Int) -> Unit
+
+pub fn setegid(Gid) -> Rslt
+
+pub fn seteuid(Uid) -> Rslt
+
+pub fn setgid(Gid) -> Rslt
+
+pub fn sethostname(@native.ConstPtr[Byte], UInt64) -> Rslt
+
+pub fn setpgid(Pid, Pid) -> Rslt
+
+pub fn setsid() -> Sid
+
+pub fn setuid(Uid) -> Rslt
+
+pub fn setvbuf(@native.Ptr[FILE], @native.Ptr[Byte], BufMode, UInt64) -> FRslt
+
+pub fn sleep(UInt) -> UInt
+
+pub let stderr_fileno : Fd
+
+pub let stderr_fileptr : @native.Ptr[FILE]
+
+pub let stdin_fileno : Fd
+
+pub let stdin_fileptr : @native.Ptr[FILE]
+
+pub let stdout_fileno : Fd
+
+pub let stdout_fileptr : @native.Ptr[FILE]
+
+pub fn sync() -> Unit
+
+pub fn ttyname_r(Fd, @native.Ptr[Byte], UInt64) -> Rslt
+
+pub fn ungetc(Int, @native.Ptr[FILE]) -> FRslt
+
+pub fn unlinkat(Fd, @native.CStr, Int) -> Rslt
+
+pub let w_ok : AccessMode
+
+pub fn wait(@native.Ptr[Int]) -> Pid
+
+pub fn write(Fd, @native.ConstPtr[Byte], UInt64) -> Int64
+
+pub let x_ok : AccessMode
+
 // Errors
 
 // Types and methods
+type AccessMode
+pub impl Default for AccessMode
+pub impl Eq for AccessMode
+pub impl Show for AccessMode
+
+type AtFlag
+pub impl Default for AtFlag
+pub impl Eq for AtFlag
+pub impl Show for AtFlag
+
+type BufMode
+pub impl Default for BufMode
+pub impl Eq for BufMode
+pub impl Show for BufMode
+
+type FILE
+
+type FRslt
+pub fn FRslt::to_char(Self) -> Unit
+pub impl Default for FRslt
+pub impl Eq for FRslt
+pub impl Show for FRslt
+
+type FcntlCmd
+pub impl Default for FcntlCmd
+pub impl Eq for FcntlCmd
+pub impl Show for FcntlCmd
+
+type Fd
+pub impl Default for Fd
+pub impl Eq for Fd
+pub impl Show for Fd
+
+type Gid
+pub fn Gid::unsafe_from_uint(UInt) -> Self
+pub impl Default for Gid
+pub impl Eq for Gid
+pub impl Show for Gid
+
+type Mode
+pub impl BitOr for Mode
+pub impl Default for Mode
+pub impl Eq for Mode
+pub impl Show for Mode
+
+type OpenFlag
+pub impl BitOr for OpenFlag
+pub impl Default for OpenFlag
+pub impl Eq for OpenFlag
+pub impl Show for OpenFlag
+
+type Pid
+pub fn Pid::is_child(Self) -> Bool
+pub fn Pid::is_error(Self) -> Bool
+pub fn Pid::unsafe_from_int(Int) -> Self
+pub impl Default for Pid
+pub impl Eq for Pid
+pub impl Show for Pid
+
+type Rslt
+pub fn Rslt::is_error(Self) -> Bool
+pub fn Rslt::is_success(Self) -> Bool
+pub impl Default for Rslt
+pub impl Eq for Rslt
+pub impl Show for Rslt
+
+type Sid
+pub fn Sid::is_error(Self) -> Bool
+pub fn Sid::unsafe_from_uint(UInt) -> Self
+pub impl Default for Sid
+pub impl Eq for Sid
+pub impl Show for Sid
+
+type Signal
+pub impl Default for Signal
+pub impl Eq for Signal
+pub impl Show for Signal
+
+type Uid
+pub fn Uid::unsafe_from_uint(UInt) -> Self
+pub impl Default for Uid
+pub impl Eq for Uid
+pub impl Show for Uid
+
+type Whence
+pub impl Default for Whence
+pub impl Eq for Whence
+pub impl Show for Whence
 
 // Type aliases
+pub using @native {type CStr}
+
+pub using @native {type ConstPtr}
+
+pub using @native {type Ptr}
+
+pub using @native {type Rc}
 
 // Traits
 
