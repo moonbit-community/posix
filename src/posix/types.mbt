@@ -27,7 +27,7 @@ struct Sid(Int) derive(Default, Eq, Show)
 
 ///|
 pub fn Sid::is_error(self : Sid) -> Bool {
-  self.inner() == -1
+  self.0 == -1
 }
 
 ///|
@@ -47,12 +47,12 @@ struct Rslt(Int) derive(Default, Eq, Show)
 
 ///|
 pub fn Rslt::is_success(x : Rslt) -> Bool {
-  x.inner() == 0
+  x.0 == 0
 }
 
 ///|
 pub fn Rslt::is_error(x : Rslt) -> Bool {
-  x.inner() == -1
+  x.0 == -1
 }
 
 ///|
@@ -84,10 +84,10 @@ struct AccessMode(Int) derive(Default, Eq, Show)
 
 ///|
 pub fn Pid::is_child(self : Pid) -> Bool {
-  self.inner() == 0
+  self.0 == 0
 }
 
 ///|
 pub fn Pid::is_error(self : Pid) -> Bool {
-  self.inner() == -1
+  self.0 == -1
 }
