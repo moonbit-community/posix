@@ -980,11 +980,6 @@ pub impl Default for Sid
 pub impl Eq for Sid
 pub impl Show for Sid
 
-type Signal
-pub impl Default for Signal
-pub impl Eq for Signal
-pub impl Show for Signal
-
 type Uid
 pub fn Uid::unsafe_from_uint(UInt) -> Self
 pub impl Default for Uid

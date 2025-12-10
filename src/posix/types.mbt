@@ -59,7 +59,7 @@ pub fn Rslt::is_error(x : Rslt) -> Bool {
 struct FRslt(Int) derive(Default, Eq, Show)
 
 ///|
-struct Signal(Int) derive(Default, Eq, Show)
+priv struct Signal(Int) derive(Default, Eq, Show)
 
 ///|
 typealias Int as Errno
