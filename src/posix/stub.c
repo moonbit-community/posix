@@ -151,7 +151,7 @@ int32_t moonbit_posix_wait4(
 
 // https://man7.org/linux/man-pages/man2/writev.2.html
 int64_t moonbit_posix_writev(int fd, void* iov, int iovcnt) {
-  return moonbit_posix_writev(fd, iov, iovcnt);
+  return writev(fd, iov, iovcnt);
 }
 
 // https://man7.org/linux/man-pages/man2/readv.2.html
