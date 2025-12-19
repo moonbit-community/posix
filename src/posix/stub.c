@@ -151,7 +151,7 @@ int32_t moonbit_posix_wait4(
 
 // https://man7.org/linux/man-pages/man2/writev.2.html
 int64_t moonbit_posix_writev(int fd, void* iov, int iovcnt) {
-  return moonbit_posix_writev(fd, iov, iovcnt);
+  return writev(fd, iov, iovcnt);
 }
 
 // https://man7.org/linux/man-pages/man2/readv.2.html
@@ -222,19 +222,25 @@ rslt_t moonbit_posix_timer_settime(
 #include <fcntl.h>
 #include <unistd.h>
 
+#ifdef _CS_GNU_LIBC_VERSION
 int32_t moonbit_posix__CS_GNU_LIBC_VERSION() {
   return _CS_GNU_LIBC_VERSION;
 }
+#endif
+#ifdef _CS_GNU_LIBPTHREAD_VERSION
 int32_t moonbit_posix__CS_GNU_LIBPTHREAD_VERSION() {
   return _CS_GNU_LIBPTHREAD_VERSION;
 }
+#endif
 
-#ifndef __APPLE__
 access_mode_t moonbit_posix_F_OK() { return F_OK; }
 access_mode_t moonbit_posix_R_OK() { return R_OK; }
 access_mode_t moonbit_posix_W_OK() { return W_OK; }
 access_mode_t moonbit_posix_X_OK() { return X_OK; }
+#ifdef O_RSYNC
 open_flag_t moonbit_posix_O_RSYNC() { return O_RSYNC; }
+#else
+open_flag_t moonbit_posix_O_RSYNC() { return 0; }
 #endif
 // https://www.man7.org/linux/man-pages/man0/fcntl.h.0p.html
 

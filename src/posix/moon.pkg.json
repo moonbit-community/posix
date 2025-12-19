@@ -1,12 +1,12 @@
 {
-  "is-main": true,
+  "is-main": false,
   "import": ["illusory0x0/native"],
   "link": {
     "native": {
       "cc-flags": "-fwrapv -fsanitize=address -fsanitize=undefined"
     }
   },
-  "warn-list": "-1-2-3-6",
+  "warn-list": "-1-2-3-6-29",
   "supported-targets": ["native"],
   "targets": {
     "bitor.mbt": ["native"],
