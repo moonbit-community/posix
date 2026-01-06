@@ -1,5 +1,5 @@
 ///|
-typealias @native.CStr
+using @native {type CStr}
 
 ///|
 fn main {

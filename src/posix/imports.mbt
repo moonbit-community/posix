@@ -1,11 +1,11 @@
 ///|
-pub typealias @native.CStr
+pub using @native {type CStr}
 
 ///|
-pub typealias @native.Ptr
+pub using @native {type Ptr}
 
 ///|
-pub typealias @native.ConstPtr
+pub using @native {type ConstPtr}
 
 ///|
-pub typealias @native.Rc
+pub using @native {type Rc}
