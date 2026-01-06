@@ -1,5 +1,6 @@
 ///|
 /// https://man7.org/linux/man-pages/man3/access.3p.html
+#borrow(path)
 pub extern "c" fn faccessat(
   dirfd : Fd,
   path : CStr,
@@ -9,10 +10,12 @@ pub extern "c" fn faccessat(
 
 ///|
 /// https://man7.org/linux/man-pages/man2/unlink.2.html
+#borrow(path)
 pub extern "c" fn unlinkat(dirfd : Fd, path : CStr, flags : Int) -> Rslt = "moonbit_posix_unlinkat"
 
 ///|
 /// https://man7.org/linux/man-pages/man3/chown.3p.html
+#borrow(path)
 pub extern "c" fn fchownat(
   dirfd : Fd,
   path : CStr,
@@ -23,6 +26,7 @@ pub extern "c" fn fchownat(
 
 ///|
 /// https://man7.org/linux/man-pages/man2/link.2.html
+#borrow(oldpath, newpath)
 pub extern "c" fn linkat(
   olddirfd : Fd,
   oldpath : CStr,

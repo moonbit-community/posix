@@ -27,17 +27,17 @@ struct Sid(Int) derive(Default, Eq, Show)
 
 ///|
 pub fn Sid::is_error(self : Sid) -> Bool {
-  self.inner() == -1
+  self.0 == -1
 }
 
 ///|
-typealias Int64 as OptSize
+type OptSize = Int64
 
 ///|
-typealias Int64 as Off
+type Off = Int64
 
 ///|
-typealias UInt64 as Size
+type Size = UInt64
 
 ///|
 struct Mode(UInt) derive(Default, Eq, Show) // TODO
@@ -47,12 +47,12 @@ struct Rslt(Int) derive(Default, Eq, Show)
 
 ///|
 pub fn Rslt::is_success(x : Rslt) -> Bool {
-  x.inner() == 0
+  x.0 == 0
 }
 
 ///|
 pub fn Rslt::is_error(x : Rslt) -> Bool {
-  x.inner() == -1
+  x.0 == -1
 }
 
 ///|
@@ -62,7 +62,7 @@ struct FRslt(Int) derive(Default, Eq, Show)
 struct Signal(Int) derive(Default, Eq, Show)
 
 ///|
-typealias Int as Errno
+type Errno = Int
 
 ///|
 struct AtFlag(Int) derive(Default, Eq, Show)
@@ -84,10 +84,10 @@ struct AccessMode(Int) derive(Default, Eq, Show)
 
 ///|
 pub fn Pid::is_child(self : Pid) -> Bool {
-  self.inner() == 0
+  self.0 == 0
 }
 
 ///|
 pub fn Pid::is_error(self : Pid) -> Bool {
-  self.inner() == -1
+  self.0 == -1
 }

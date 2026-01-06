@@ -22,10 +22,12 @@ pub let stderr_fileptr : Ptr[FILE] = _stderr()
 
 ///|
 /// https://www.man7.org/linux/man-pages/man3/fputc.3p.html
+#borrow(stream)
 pub extern "c" fn fputc(byte : Int, stream : Ptr[FILE]) -> FRslt = "moonbit_posix_fputc"
 
 ///|
 /// https://man7.org/linux/man-pages/man3/fputs.3p.html
+#borrow(string, stream)
 pub extern "c" fn fputs(string : CStr, stream : Ptr[FILE]) -> FRslt = "moonbit_posix_fputs"
 
 ///|
@@ -39,10 +41,12 @@ pub fn FRslt::to_char(self : FRslt) = "%char_to_int"
 
 ///|
 /// https://man7.org/linux/man-pages/man3/fgetc.3.html
+#borrow(stream)
 pub extern "c" fn fgetc(stream : Ptr[FILE]) -> FRslt = "moonbit_posix_fgetc"
 
 ///|
 /// https://man7.org/linux/man-pages/man3/fgets.3p.html
+#borrow(s, stream)
 pub extern "c" fn fgets(
   s : Ptr[Byte],
   n : Int,
@@ -51,6 +55,7 @@ pub extern "c" fn fgets(
 
 ///|
 /// https://www.man7.org/linux/man-pages/man3/ungetc.3p.html
+#borrow(stream)
 pub extern "c" fn ungetc(ch : Int, stream : Ptr[FILE]) -> FRslt = "moonbit_posix_ungetc"
 
 ///|
@@ -79,6 +84,7 @@ pub let bufsiz : Size = _BUFSIZ()
 
 ///|
 /// https://man7.org/linux/man-pages/man3/fwrite.3p.html
+#borrow(ptr, stream)
 pub extern "c" fn fwrite(
   ptr : ConstPtr[Byte],
   size : Size,
@@ -88,6 +94,7 @@ pub extern "c" fn fwrite(
 
 ///|
 /// https://man7.org/linux/man-pages/man3/fread.3.html
+#borrow(ptr, stream)
 pub extern "c" fn fread(
   ptr : Ptr[Byte],
   size : Size,
@@ -97,10 +104,12 @@ pub extern "c" fn fread(
 
 ///|
 /// https://man7.org/linux/man-pages/man3/fflush.3.html
+#borrow(stream)
 pub extern "c" fn fflush(stream : Ptr[FILE]) -> FRslt = "moonbit_posix_fflush"
 
 ///|
 /// https://man7.org/linux/man-pages/man3/setvbuf.3p.html
+#borrow(stream, buf)
 pub extern "c" fn setvbuf(
   stream : Ptr[FILE],
   buf : Ptr[Byte],
@@ -110,8 +119,10 @@ pub extern "c" fn setvbuf(
 
 ///|
 /// https://man7.org/linux/man-pages/man3/fclose.3.html
+#borrow(stream)
 pub extern "c" fn fclose(stream : Ptr[FILE]) -> FRslt = "moonbit_posix_fclose"
 
 ///|
 /// https://man7.org/linux/man-pages/man3/fdopen.3p.html
+#borrow(mode)
 pub extern "c" fn fdopen(fd : Fd, mode : CStr) -> Ptr[FILE] = "moonbit_posix_fdopen"

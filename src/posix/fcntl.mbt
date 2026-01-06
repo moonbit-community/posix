@@ -240,6 +240,7 @@ pub let f_wrlck : FcntlCmd = _F_WRLCK()
 
 ///|
 /// https://man7.org/linux/man-pages/man2/open.2.html
+#borrow(path)
 pub extern "c" fn openat(
   dirfd : Fd,
   path : CStr,

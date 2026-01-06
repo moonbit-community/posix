@@ -4,10 +4,12 @@ pub extern "c" fn close(fd : Fd) -> Rslt = "moonbit_posix_close"
 
 ///|
 /// https://man7.org/linux/man-pages/man2/read.2.html
+#borrow(buf)
 pub extern "c" fn read(fd : Fd, buf : Ptr[Byte], count : Size) -> OptSize = "moonbit_posix_read"
 
 ///|
 /// https://man7.org/linux/man-pages/man2/write.2.html
+#borrow(buf)
 pub extern "c" fn write(fd : Fd, buf : ConstPtr[Byte], count : Size) -> OptSize = "moonbit_posix_write"
 
 ///|
@@ -50,6 +52,7 @@ pub extern "c" fn fdatasync(fd : Fd) -> Rslt = "moonbit_posix_fdatasync"
 
 ///|
 /// https://man7.org/linux/man-pages/man2/execve.2.html
+#borrow(argv, envp)
 pub extern "c" fn fexecve(
   fd : Fd,
   argv : ConstPtr[CStr],
@@ -84,10 +87,12 @@ pub extern "c" fn lseek(fd : Fd, offset : Off, whence : Whence) -> Off = "moonbi
 ///|
 /// https://man7.org/linux/man-pages/man7/pipe.7.html
 /// https://man7.org/linux/man-pages/man2/pipe.2.html
+#borrow(fds)
 pub extern "c" fn pipe(fds : Ptr[Fd]) -> Rslt = "moonbit_posix_pipe"
 
 ///|
 /// https://man7.org/linux/man-pages/man2/pread.2.html
+#borrow(buf)
 pub extern "c" fn pread(
   fd : Fd,
   buf : Ptr[Byte],
@@ -97,6 +102,7 @@ pub extern "c" fn pread(
 
 ///|
 /// https://www.man7.org/linux/man-pages/man3/pwrite.3p.html
+#borrow(buf)
 pub extern "c" fn pwrite(
   fd : Fd,
   buf : ConstPtr[Byte],
