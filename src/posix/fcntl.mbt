@@ -238,12 +238,13 @@ pub let f_unlck : FcntlCmd = _F_UNLCK()
 ///|
 pub let f_wrlck : FcntlCmd = _F_WRLCK()
 
-///| https://man7.org/linux/man-pages/man2/open.2.html
+///|
+/// https://man7.org/linux/man-pages/man2/open.2.html
 pub extern "c" fn openat(
   dirfd : Fd,
   path : CStr,
   flags : OpenFlag,
-  mode : Mode
+  mode : Mode,
 ) -> Fd = "moonbit_posix_openat"
 
 ///|
