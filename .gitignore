@@ -8,4 +8,5 @@ tmp
 .cache
 node_modules
 _build/
+_build
 target
